@@ -65,6 +65,14 @@ function loadMenu() {
                             <span class="lesson-badge d-none d-xl-inline" style="background: #dc3545;">Testing</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="${basePath}Apply/memory_cards.html" class="nav-link">
+                            <i class="bi bi-collection me-2"></i>
+                            <span class="d-none d-lg-inline">Memory Cards</span>
+                            <span class="d-lg-none">Cards</span>
+                            <span class="lesson-badge d-none d-xl-inline" style="background: #6f42c1;">Practice</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>

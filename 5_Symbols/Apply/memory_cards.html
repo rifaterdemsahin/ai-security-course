@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Cards - AI Security Course</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../menu.css">
+    
+    <style>
+        .card-container {
+            perspective: 1000px;
+            margin: 20px 0;
+        }
+        
+        .memory-card {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+        
+        .memory-card.flipped {
+            transform: rotateY(180deg);
+        }
+        
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .card-front {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .card-back {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            transform: rotateY(180deg);
+        }
+        
+        .card-question {
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        
+        .card-answer {
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        
+        .controls {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .score-display {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .btn-card-action {
+            margin: 5px;
+            border-radius: 25px;
+            padding: 10px 20px;
+        }
+        
+        .card-progress {
+            background: #e9ecef;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .progress-bar-custom {
+            height: 100%;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            transition: width 0.3s ease;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .difficulty-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .difficulty-easy { background: #28a745; color: white; }
+        .difficulty-medium { background: #ffc107; color: black; }
+        .difficulty-hard { background: #dc3545; color: white; }
+        
+        @media (max-width: 768px) {
+            .card-question {
+                font-size: 1.2rem;
+            }
+            
+            .card-answer {
+                font-size: 1rem;
+            }
+            
+            .memory-card {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Container -->
+    <div id="menu-container"></div>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center mb-4">
+                    <h1 class="display-4">🧠 AI Security Memory Cards</h1>
+                    <p class="lead">Test your knowledge of AI security concepts with interactive flashcards</p>
+                </div>
+                
+                <!-- Score Display -->
+                <div class="score-display">
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <div class="stat-number" id="current-card">1</div>
+                            <div>Current Card</div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="stat-number" id="total-cards">0</div>
+                            <div>Total Cards</div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="stat-number" id="correct-answers">0</div>
+                            <div>Correct</div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="stat-number" id="accuracy">0%</div>
+                            <div>Accuracy</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="card-progress">
+                    <div class="progress-bar-custom" id="progress-bar" style="width: 0%"></div>
+                </div>
+                
+                <!-- Card Display -->
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card-container">
+                            <div class="memory-card" id="memory-card" onclick="flipCard()">
+                                <div class="card-face card-front">
+                                    <div>
+                                        <div class="card-question" id="card-question">Click to start learning!</div>
+                                        <small class="mt-3 d-block opacity-75">Click to reveal answer</small>
+                                    </div>
+                                    <div class="difficulty-badge difficulty-medium" id="difficulty-badge">Medium</div>
+                                </div>
+                                <div class="card-face card-back">
+                                    <div class="card-answer" id="card-answer">Ready to begin your AI security journey?</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controls -->
+                <div class="controls">
+                    <button class="btn btn-success btn-card-action" onclick="markCorrect()" id="correct-btn" disabled>
+                        <i class="bi bi-check-circle"></i> I knew it
+                    </button>
+                    <button class="btn btn-warning btn-card-action" onclick="markIncorrect()" id="incorrect-btn" disabled>
+                        <i class="bi bi-x-circle"></i> I didn't know
+                    </button>
+                    <button class="btn btn-primary btn-card-action" onclick="nextCard()" id="next-btn" disabled>
+                        Next Card <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+                
+                <div class="controls">
+                    <button class="btn btn-outline-secondary btn-card-action" onclick="shuffleCards()">
+                        <i class="bi bi-shuffle"></i> Shuffle
+                    </button>
+                    <button class="btn btn-outline-info btn-card-action" onclick="resetGame()">
+                        <i class="bi bi-arrow-clockwise"></i> Reset
+                    </button>
+                    <button class="btn btn-outline-primary btn-card-action" onclick="toggleStudyMode()">
+                        <i class="bi bi-book"></i> <span id="study-mode-text">Study Mode</span>
+                    </button>
+                </div>
+                
+                <!-- Study Mode Info -->
+                <div class="alert alert-info mt-3" id="study-mode-info" style="display: none;">
+                    <i class="bi bi-info-circle"></i>
+                    <strong>Study Mode:</strong> In this mode, you can review all cards without tracking accuracy. Perfect for learning!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Menu JS -->
+    <script src="../menu.js"></script>
+    
+    <script>
+        // Card data will be loaded from markdown files
+        let cards = [];
+        let currentCardIndex = 0;
+        let correctAnswers = 0;
+        let totalAnswered = 0;
+        let isFlipped = false;
+        let studyMode = false;
+        
+        // Card data extracted from markdown files
+        const cardData = [
+            { question: "adversarial attack", answer: "A malicious input designed to fool AI models by adding imperceptible perturbations that cause misclassification while appearing normal to humans", difficulty: "medium" },
+            { question: "adversarial patch", answer: "A physical sticker or patch that can be placed in the real world to fool computer vision models, causing misclassification when detected", difficulty: "hard" },
+            { question: "adversarial robustness", answer: "The ability of an AI model to maintain correct predictions despite adversarial perturbations or malicious inputs", difficulty: "medium" },
+            { question: "adversarial training", answer: "A defense technique where models are trained on adversarial examples to improve their robustness against attacks", difficulty: "hard" },
+            { question: "AI security lifecycle", answer: "The comprehensive approach to securing AI systems throughout their entire development, deployment, and maintenance phases", difficulty: "easy" },
+            { question: "ART toolbox", answer: "Adversarial Robustness Toolbox - A Python library for machine learning security that provides tools for adversarial attacks and defenses", difficulty: "medium" },
+            { question: "backdoor attack", answer: "An attack where malicious functionality is hidden in a model that activates only when specific trigger patterns are present in the input", difficulty: "hard" },
+            { question: "black box attack", answer: "An adversarial attack where the attacker has no access to the model's internal parameters or architecture, only input-output access", difficulty: "medium" },
+            { question: "data poisoning", answer: "An attack where malicious data is injected into the training dataset to compromise the AI model's behavior, creating hidden backdoors that activate on specific triggers", difficulty: "hard" },
+            { question: "defense in depth", answer: "A layered security approach that uses multiple defensive mechanisms to protect AI systems from various types of attacks", difficulty: "medium" },
+            { question: "differential privacy", answer: "A mathematical framework that provides privacy guarantees by adding controlled noise to data or model outputs to prevent individual data reconstruction", difficulty: "hard" },
+            { question: "evasion attack", answer: "An attack that modifies input data at inference time to cause misclassification while keeping changes imperceptible to humans", difficulty: "medium" },
+            { question: "FGSM", answer: "Fast Gradient Sign Method - A simple adversarial attack algorithm that generates adversarial examples by taking a single step in the direction of the gradient to maximize loss", difficulty: "medium" },
+            { question: "input sanitization", answer: "The process of filtering, validating, and cleaning input data to remove potentially malicious content before feeding it to AI models", difficulty: "easy" },
+            { question: "LLM", answer: "Large Language Model - Advanced AI systems trained on vast amounts of text data to understand and generate human-like text", difficulty: "easy" },
+            { question: "model extraction", answer: "An attack where adversaries steal the functionality of a machine learning model by querying it and training a substitute model", difficulty: "hard" },
+            { question: "model hardening", answer: "The process of making AI models more robust and secure against various attacks through techniques like adversarial training and input validation", difficulty: "medium" },
+            { question: "model stealing", answer: "The unauthorized replication of a machine learning model's functionality through systematic querying and reverse engineering", difficulty: "hard" },
+            { question: "perturbation budget", answer: "The maximum allowed amount of modification that can be applied to an input while maintaining the adversarial attack's effectiveness and imperceptibility", difficulty: "medium" },
+            { question: "PGD", answer: "Projected Gradient Descent - An iterative adversarial attack method that applies multiple gradient steps while projecting back to a valid perturbation space", difficulty: "hard" },
+            { question: "red teaming", answer: "A security assessment approach where experts simulate adversarial attacks to identify vulnerabilities and weaknesses in AI systems", difficulty: "medium" }
+        ];
+        
+        function initializeCards() {
+            cards = [...cardData];
+            shuffleCards();
+            updateDisplay();
+            loadCard();
+        }
+        
+        function shuffleCards() {
+            for (let i = cards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [cards[i], cards[j]] = [cards[j], cards[i]];
+            }
+            currentCardIndex = 0;
+            updateDisplay();
+            loadCard();
+        }
+        
+        function loadCard() {
+            if (cards.length === 0) return;
+            
+            const card = cards[currentCardIndex];
+            document.getElementById('card-question').textContent = card.question;
+            document.getElementById('card-answer').textContent = card.answer;
+            
+            // Set difficulty badge
+            const badge = document.getElementById('difficulty-badge');
+            badge.textContent = card.difficulty.charAt(0).toUpperCase() + card.difficulty.slice(1);
+            badge.className = `difficulty-badge difficulty-${card.difficulty}`;
+            
+            // Reset card state
+            document.getElementById('memory-card').classList.remove('flipped');
+            isFlipped = false;
+            
+            // Update button states
+            document.getElementById('correct-btn').disabled = true;
+            document.getElementById('incorrect-btn').disabled = true;
+            document.getElementById('next-btn').disabled = true;
+        }
+        
+        function flipCard() {
+            const card = document.getElementById('memory-card');
+            card.classList.toggle('flipped');
+            isFlipped = !isFlipped;
+            
+            if (isFlipped && !studyMode) {
+                // Enable answer buttons when card is flipped and not in study mode
+                document.getElementById('correct-btn').disabled = false;
+                document.getElementById('incorrect-btn').disabled = false;
+            }
+            
+            if (isFlipped && studyMode) {
+                // In study mode, just enable next button
+                document.getElementById('next-btn').disabled = false;
+            }
+        }
+        
+        function markCorrect() {
+            if (!isFlipped) return;
+            correctAnswers++;
+            totalAnswered++;
+            document.getElementById('correct-btn').disabled = true;
+            document.getElementById('incorrect-btn').disabled = true;
+            document.getElementById('next-btn').disabled = false;
+            updateDisplay();
+        }
+        
+        function markIncorrect() {
+            if (!isFlipped) return;
+            totalAnswered++;
+            document.getElementById('correct-btn').disabled = true;
+            document.getElementById('incorrect-btn').disabled = true;
+            document.getElementById('next-btn').disabled = false;
+            updateDisplay();
+        }
+        
+        function nextCard() {
+            currentCardIndex = (currentCardIndex + 1) % cards.length;
+            loadCard();
+            updateDisplay();
+        }
+        
+        function updateDisplay() {
+            document.getElementById('current-card').textContent = currentCardIndex + 1;
+            document.getElementById('total-cards').textContent = cards.length;
+            document.getElementById('correct-answers').textContent = correctAnswers;
+            
+            const accuracy = totalAnswered > 0 ? Math.round((correctAnswers / totalAnswered) * 100) : 0;
+            document.getElementById('accuracy').textContent = accuracy + '%';
+            
+            const progress = ((currentCardIndex + 1) / cards.length) * 100;
+            document.getElementById('progress-bar').style.width = progress + '%';
+        }
+        
+        function resetGame() {
+            currentCardIndex = 0;
+            correctAnswers = 0;
+            totalAnswered = 0;
+            updateDisplay();
+            loadCard();
+        }
+        
+        function toggleStudyMode() {
+            studyMode = !studyMode;
+            const studyModeText = document.getElementById('study-mode-text');
+            const studyModeInfo = document.getElementById('study-mode-info');
+            const correctBtn = document.getElementById('correct-btn');
+            const incorrectBtn = document.getElementById('incorrect-btn');
+            
+            if (studyMode) {
+                studyModeText.textContent = 'Exit Study Mode';
+                studyModeInfo.style.display = 'block';
+                correctBtn.style.display = 'none';
+                incorrectBtn.style.display = 'none';
+            } else {
+                studyModeText.textContent = 'Study Mode';
+                studyModeInfo.style.display = 'none';
+                correctBtn.style.display = 'inline-block';
+                incorrectBtn.style.display = 'inline-block';
+            }
+            
+            // Reset button states
+            loadCard();
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            switch(event.key) {
+                case ' ':
+                case 'Enter':
+                    event.preventDefault();
+                    flipCard();
+                    break;
+                case 'ArrowRight':
+                case 'n':
+                    if (!document.getElementById('next-btn').disabled) {
+                        nextCard();
+                    }
+                    break;
+                case '1':
+                    if (!document.getElementById('correct-btn').disabled) {
+                        markCorrect();
+                    }
+                    break;
+                case '2':
+                    if (!document.getElementById('incorrect-btn').disabled) {
+                        markIncorrect();
+                    }
+                    break;
+                case 'r':
+                    resetGame();
+                    break;
+                case 's':
+                    shuffleCards();
+                    break;
+            }
+        });
+        
+        // Initialize the game when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCards();
+        });
+    </script>
+</body>
+</html>
