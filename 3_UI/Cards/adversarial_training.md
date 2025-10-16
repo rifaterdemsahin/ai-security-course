@@ -1,2 +1,2 @@
-- question : adversarial training
+- question : 🏋️ adversarial training
 - answer : A defense mechanism that strengthens AI models by training them on both normal data and adversarial examples, creating inherent resilience against attacks
