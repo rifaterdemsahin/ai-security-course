@@ -1,8 +1,23 @@
 function loadMenu() {
     const menuContainer = document.getElementById('menu-container');
     if (menuContainer) {
-        const pathPrefix = window.location.pathname.includes('/5_Symbols/') ? '' : '5_Symbols/';
         const currentPath = window.location.pathname;
+        
+        // Determine base path for GitHub Pages
+        let basePath = '';
+        if (currentPath.includes('/ai-security-course/')) {
+            // We're on GitHub Pages
+            basePath = '/ai-security-course/5_Symbols/';
+        } else if (currentPath.includes('/5_Symbols/')) {
+            // We're already in 5_Symbols
+            basePath = './';
+            if (currentPath.includes('Lessons/')) {
+                basePath = '../../';
+            }
+        } else {
+            // We're at root level
+            basePath = '5_Symbols/';
+        }
         
         // Determine which lesson is active
         let activeLesson = '';
@@ -13,7 +28,7 @@ function loadMenu() {
         menuContainer.innerHTML = `
         <nav class="top-nav">
             <div class="nav-container">
-                <a href="/${pathPrefix}index.html" class="nav-brand">🛡️ AI Security Course</a>
+                <a href="${basePath}index.html" class="nav-brand">🛡️ AI Security Course</a>
                 
                 <button class="mobile-menu-toggle d-md-none" onclick="toggleMobileMenu()">
                     <i class="bi bi-list"></i>
@@ -21,13 +36,13 @@ function loadMenu() {
                 
                 <ul class="nav-menu d-md-flex" id="nav-menu">
                     <li class="nav-item">
-                        <a href="/${pathPrefix}index.html" class="nav-link home-link">
+                        <a href="${basePath}index.html" class="nav-link home-link">
                             <i class="bi bi-house-fill me-2"></i>
                             <span class="d-none d-lg-inline">Home</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/${pathPrefix}Lessons/Lesson 1/index.html" class="nav-link ${activeLesson === 'lesson1' ? 'active' : ''}">
+                        <a href="${basePath}Lessons/Lesson 1/index.html" class="nav-link ${activeLesson === 'lesson1' ? 'active' : ''}">
                             <i class="bi bi-book me-2"></i>
                             <span class="d-none d-lg-inline">Lesson 1: Attacker's Playbook</span>
                             <span class="d-lg-none">Lesson 1</span>
@@ -35,7 +50,7 @@ function loadMenu() {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/${pathPrefix}Lessons/Lesson 2/index.html" class="nav-link ${activeLesson === 'lesson2' ? 'active' : ''}">
+                        <a href="${basePath}Lessons/Lesson 2/index.html" class="nav-link ${activeLesson === 'lesson2' ? 'active' : ''}">
                             <i class="bi bi-shield-check me-2"></i>
                             <span class="d-none d-lg-inline">Lesson 2: Building the Shield</span>
                             <span class="d-lg-none">Lesson 2</span>
@@ -43,7 +58,7 @@ function loadMenu() {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/${pathPrefix}Lessons/Lesson 3/index.html" class="nav-link ${activeLesson === 'lesson3' ? 'active' : ''}">
+                        <a href="${basePath}Lessons/Lesson 3/index.html" class="nav-link ${activeLesson === 'lesson3' ? 'active' : ''}">
                             <i class="bi bi-bug me-2"></i>
                             <span class="d-none d-lg-inline">Lesson 3: Adversarial Testing</span>
                             <span class="d-lg-none">Lesson 3</span>
