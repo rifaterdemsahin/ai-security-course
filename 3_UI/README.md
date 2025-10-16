@@ -2,33 +2,25 @@
 
 This directory contains documentation related to the user interface of the AI Security Course website.
 
-## Expected UI Components
+## Main Outcome
 
-The course website will be a simple, clean, and modern interface to present the course material. Here are the expected components:
+After completing this course, learners will be able to analyze a complex AI model for security vulnerabilities, implement robust defenses, and evaluate their effectiveness against sophisticated adversarial threats.
 
-*   **Course Homepage:** A landing page with the course title, a brief description, and a list of modules.
-*   **Module Pages:** Each module will have its own page, listing the learning items within that module (videos, readings, labs).
-*   **Learning Item Pages:** Each learning item will have its own page.
-    *   **Video Pages:** An embedded video player with a transcript.
-    *   **Reading Pages:** Formatted text content.
-    *   **Lab Pages:** Instructions for the hands-on labs, with links to the Jupyter notebooks or Google Colab.
-*   **Navigation:** A clear navigation bar to move between modules and the homepage.
-*   **Progress Tracking:** (Optional) A visual indicator to show learners which items they have completed.
+### Course Learning Objectives
 
-## Visual Style and Inspiration
+By the end of this course, learners will be able to:
 
-The visual style should be professional, clean, and engaging. We will use a modern tech aesthetic.
+*   **LO1:** Analyze and identify a range of security vulnerabilities in complex AI models, including evasion, data poisoning, and model extraction attacks.
+*   **LO2:** Apply defense mechanisms like adversarial training and differential privacy to protect AI systems from known threats.
+*   **LO3:** Evaluate the effectiveness of security measures by designing and executing simulated adversarial attacks to test the resilience of defended AI model.
 
-### Google Images Search Terms for Inspiration
+
+
+## Google Images Search Terms for Inspiration
 
 To get a better understanding of the desired look and feel, you can use the following search terms on Google Images:
 
-*   "online course UI design"
-*   "educational website design"
-*   "tech course landing page"
-*   "modern dashboard UI"
-*   "data visualization dashboard"
-*   "cybersecurity dashboard"
-*   "AI and machine learning UI"
+
+
 
 These search terms will provide visual examples of clean layouts, good typography, and effective use of color in the context of educational and technical content.
