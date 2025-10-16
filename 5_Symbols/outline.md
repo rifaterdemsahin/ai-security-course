@@ -1,18 +1,21 @@
-																												
-Outline Template																												
-																												
-Part I: Course Overview																												
-	SME to provide input in Column B			Character length (DO NOT EDIT this column)		For Starweaver Internal Team [DO NOT EDIT]																						
-Title	Secure AI: Interpret and Protect Models			39		Key Resources																						
-Estimated Workload (Time in Minutes)	70 minutes 						Guidelines & Templates	Examples																				
-Difficulty Level	Intermediate					Onboarding Information	"Short Course Guidelines & Process Overview
-Video Production Standards/Guidelines"	N/a																				
-Lead Instructor	Rifat Erdem Sahin					Outlines	Assignment Template	Completed Sample Outline																				
-						Scripts	Link to Script Template	Link to Script Example																				
-						Slides	Current Slide Template	Completed Slide Deck																				
-Main Outcome	"After completing this course, learners will be able to analyze a complex AI model for security vulnerabilities, implement robust defenses, and evaluate their effectiveness against sophisticated adversarial threats.
-"					Final Submissions to Coursera	Submit via Airtable Link	N/a																				
-Course Learning Objectives	By the end of this course, learners will be able to:																											
+# Outline Template
+
+## Part I: Course Overview
+
+### Course Information
+
+| Field | Details | Character Length | Internal Notes |
+|-------|---------|------------------|----------------|
+| **Title** | Secure AI: Interpret and Protect Models | 39 | Key Resources |
+| **Estimated Workload (Time in Minutes)** | 70 minutes | | Guidelines & Templates, Examples |
+| **Difficulty Level** | Intermediate | | Onboarding Information: "Short Course Guidelines & Process Overview, Video Production Standards/Guidelines" |
+| **Lead Instructor** | Rifat Erdem Sahin | | |
+
+### Main Outcome
+After completing this course, learners will be able to analyze a complex AI model for security vulnerabilities, implement robust defenses, and evaluate their effectiveness against sophisticated adversarial threats.
+
+### Course Learning Objectives
+By the end of this course, learners will be able to:																											
 	"LO1: Analyze and identify a range of security vulnerabilities in complex AI models, including evasion, data poisoning, and model extraction attacks.
 "																											
 	"LO2: Apply defense mechanisms like adversarial training and differential privacy to protect AI systems from known threats.
