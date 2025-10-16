@@ -13,6 +13,8 @@ function loadMenu() {
             basePath = './';
             if (currentPath.includes('Lessons/')) {
                 basePath = '../../';
+            } else if (currentPath.includes('Apply/')) {
+                basePath = '../';
             }
         } else {
             // We're at root level
