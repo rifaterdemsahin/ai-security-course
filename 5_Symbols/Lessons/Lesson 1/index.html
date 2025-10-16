@@ -1,19 +1,340 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Lesson 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1: The Attacker's Playbook - AI Security Course</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../menu.css">
 </head>
 <body>
+    <!-- Navigation Menu -->
     <div id="menu-container"></div>
-    <main>
-        <h1>Lesson 1: Attacker's Playbook</h1>
-        <p>Content for Lesson 1 will go here.</p>
-    </main>
-    <footer>
-        <p>&copy; 2025 AI Security Course</p>
+    
+    <!-- Build Status -->
+    <div class="container-fluid">
+        <div class="alert alert-success d-flex justify-content-between align-items-center mb-0" role="alert">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <span class="fw-bold">Build Status: Deployed</span>
+                <span class="ms-3 text-muted">Last Deployed: <span id="deploy-time">2025-10-16 04:14:27 UTC</span></span>
+            </div>
+            <a href="https://github.com/rifaterdemsahin/ai-security-course/tree/main" target="_blank" class="btn btn-outline-success btn-sm">
+                <i class="bi bi-github me-1"></i>View on GitHub
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-4">
+        <!-- Lesson Header -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="bg-primary text-white p-4 rounded-3 text-center">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="bi bi-shield-exclamation me-2"></i>
+                        Lesson 1: The Attacker's Playbook
+                    </h1>
+                    <p class="lead mb-3">Understanding AI Vulnerabilities</p>
+                    <div class="badge bg-light text-dark fs-6 px-3 py-2">
+                        <i class="bi bi-clock me-1"></i>Duration: 60 minutes | Learning Objective: LO1
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tell Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card border-primary">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="card-title mb-0">
+                            <i class="bi bi-book me-2"></i>Tell: Understanding the Concepts
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info">
+                            <h4><i class="bi bi-target me-2"></i>Learning Objectives</h4>
+                            <p>By the end of this lesson, you will be able to:</p>
+                            <ul class="mb-0">
+                                <li>Analyze and identify security vulnerabilities in AI models</li>
+                                <li>Understand the three primary attack categories: evasion, data poisoning, and model extraction</li>
+                                <li>Develop an adversarial mindset for security analysis</li>
+                                <li>Recognize the difference between test accuracy and adversarial robustness</li>
+                            </ul>
+                        </div>
+
+                        <h3>Core Concepts</h3>
+                        
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 border-warning">
+                                    <div class="card-header bg-warning">
+                                        <h5 class="mb-0"><i class="bi bi-bullseye me-2"></i>Evasion Attacks</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="fw-bold text-primary">The Accuracy Paradox</p>
+                                        <p>A model with 99% accuracy can still be dangerously insecure.</p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Adversaries craft inputs that look normal but break model logic</li>
+                                            <li class="list-group-item">Difference between test accuracy and adversarial robustness</li>
+                                            <li class="list-group-item">Example: Stop sign stickers that fool self-driving cars</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 border-danger">
+                                    <div class="card-header bg-danger text-white">
+                                        <h5 class="mb-0"><i class="bi bi-bug me-2"></i>Data Poisoning</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="fw-bold text-primary">The Sleeper Agent Attack</p>
+                                        <p>AI models can be turned into "sleeper agents" without detection.</p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Backdoors embedded during training phase</li>
+                                            <li class="list-group-item">Poisoned models appear to function perfectly</li>
+                                            <li class="list-group-item">Specific inputs activate malicious behavior</li>
+                                            <li class="list-group-item">Training-time vs. test-time attacks</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 border-info">
+                                    <div class="card-header bg-info text-white">
+                                        <h5 class="mb-0"><i class="bi bi-download me-2"></i>Model Extraction</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="fw-bold text-primary">The Invisible Theft</p>
+                                        <p>Stealing AI's 'secret sauce' without touching the code.</p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Query-based attacks through API calls</li>
+                                            <li class="list-group-item">Model extraction with black-box access</li>
+                                            <li class="list-group-item">Recognizing extraction attempts</li>
+                                            <li class="list-group-item">Intellectual property theft concerns</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-primary mt-4">
+                            <h5><i class="bi bi-lightbulb me-2"></i>Critical Understanding</h5>
+                            <p class="mb-0">AI systems are not infallible black boxes; they are software with unique vulnerabilities. You must learn to see models through the eyes of an attacker, recognizing how they can be manipulated through various attack vectors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Show Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card border-success">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="card-title mb-0">
+                            <i class="bi bi-eye me-2"></i>Show: Real-World Examples and Demonstrations
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body">
+                                        <h5><i class="bi bi-car-front me-2"></i>Stop Sign Attack on Self-Driving Cars</h5>
+                                        <p>Researchers demonstrated how simple stickers on a stop sign can trick image recognition systems.</p>
+                                        <div class="badge bg-danger">Impact: Catastrophic model failure in safety-critical systems</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body">
+                                        <h5><i class="bi bi-chat-dots me-2"></i>Coach Dialogue: The Trojan Horse</h5>
+                                        <p>Interactive scenario: You're a lead ML Engineer investigating a malware detector failure.</p>
+                                        <div class="badge bg-info">Duration: 10-15 minutes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Do Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card border-warning">
+                    <div class="card-header bg-warning">
+                        <h2 class="card-title mb-0">
+                            <i class="bi bi-tools me-2"></i>Do: Hands-On Activities
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body">
+                                        <h5><i class="bi bi-bullseye me-2"></i>Attack Simulation Lab</h5>
+                                        <p>Practice crafting adversarial examples against a sample image classifier</p>
+                                        <ul class="small">
+                                            <li>Generate evasion attacks using gradient-based methods</li>
+                                            <li>Observe how small perturbations fool the model</li>
+                                            <li>Measure attack success rates</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body">
+                                        <h5><i class="bi bi-search me-2"></i>Vulnerability Assessment</h5>
+                                        <p>Analyze a provided AI model for potential weaknesses</p>
+                                        <ul class="small">
+                                            <li>Identify potential attack surfaces</li>
+                                            <li>Document vulnerability types</li>
+                                            <li>Assess risk levels</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apply Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card border-danger">
+                    <div class="card-header bg-danger text-white">
+                        <h2 class="card-title mb-0">
+                            <i class="bi bi-rocket me-2"></i>Apply: Real-World Application
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-warning">
+                            <h4>Capstone Project: Security Assessment Report</h4>
+                            <p class="mb-0">Create a comprehensive security assessment for a real or simulated AI system in your domain of interest.</p>
+                        </div>
+                        
+                        <div class="row g-3">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-clipboard-check display-4 text-primary mb-2"></i>
+                                        <h6>Assessment Framework</h6>
+                                        <p class="small">Develop systematic evaluation approach</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-gear display-4 text-success mb-2"></i>
+                                        <h6>Target System Analysis</h6>
+                                        <p class="small">Choose and analyze AI application</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-file-text display-4 text-warning mb-2"></i>
+                                        <h6>Professional Report</h6>
+                                        <p class="small">Document findings and recommendations</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-people display-4 text-info mb-2"></i>
+                                        <h6>Presentation & Review</h6>
+                                        <p class="small">Present to peers for feedback</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Check -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title mb-0">
+                            <i class="bi bi-graph-up me-2"></i>Progress Check
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Before moving to Lesson 2, ensure you can:</p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Identify the three main categories of AI attacks</li>
+                                    <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Explain why high test accuracy doesn't guarantee security</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Recognize potential attack vectors in AI systems</li>
+                                    <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Think from an attacker's perspective about vulnerabilities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 AI Security Course</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://github.com/rifaterdemsahin/ai-security-course" class="text-white text-decoration-none">
+                        <i class="bi bi-github me-1"></i>View Source
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
     <script src="../../menu.js"></script>
+    
+    <!-- Dynamic Build Status -->
+    <script>
+        function updateBuildStatus() {
+            const deployTimeElement = document.getElementById('deploy-time');
+            if (deployTimeElement) {
+                const baseDeployTime = '2025-10-16 04:14:27 UTC';
+                deployTimeElement.textContent = baseDeployTime;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', updateBuildStatus);
+    </script>
 </body>
 </html>
