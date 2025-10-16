@@ -87,3 +87,58 @@ Here is a comprehensive list of Google Images search prompts, categorized for ma
 
 
 These search terms will provide visual examples of clean layouts, good typography, and effective use of color in the context of educational and technical content.
+
+
+---
+
+Here are the Google Images search URLs for the provided terms, formatted as clickable links in a bullet list:
+
+**Category 1: Foundational & Conceptual Searches**
+- [AI Security Mind Map](https://www.google.com/search?tbm=isch&q=AI+Security+Mind+Map)
+- [Adversarial AI landscape](https://www.google.com/search?tbm=isch&q=Adversarial+AI+landscape)
+- [Machine Learning security vulnerabilities](https://www.google.com/search?tbm=isch&q=Machine+Learning+security+vulnerabilities)
+- [AI model threat model](https://www.google.com/search?tbm=isch&q=AI+model+threat+model)
+- [Robust AI system architecture](https://www.google.com/search?tbm=isch&q=Robust+AI+system+architecture)
+- [AI Security lifecycle](https://www.google.com/search?tbm=isch&q=AI+Security+lifecycle)
+
+**Category 2: Specific Attack Vectors (Related to LO1)**
+- [Adversarial attack evasion example](https://www.google.com/search?tbm=isch&q=Adversarial+attack+evasion+example)
+- [Fooling AI with adversarial patches](https://www.google.com/search?tbm=isch&q=Fooling+AI+with+adversarial+patches)
+- [Data poisoning attack diagram](https://www.google.com/search?tbm=isch&q=Data+poisoning+attack+diagram)
+- [Backdoor attack machine learning](https://www.google.com/search?tbm=isch&q=Backdoor+attack+machine+learning)
+- [Model extraction attack schematic](https://www.google.com/search?tbm=isch&q=Model+extraction+attack+schematic)
+- [Model stealing attack AI](https://www.google.com/search?tbm=isch&q=Model+stealing+attack+AI)
+- [AI supply chain attack](https://www.google.com/search?tbm=isch&q=AI+supply+chain+attack)
+
+**Category 3: Specific Defense Mechanisms (Related to LO2)**
+- [Adversarial training workflow](https://www.google.com/search?tbm=isch&q=Adversarial+training+workflow)
+- [Adversarial training vs normal training](https://www.google.com/search?tbm=isch&q=Adversarial+training+vs+normal+training)
+- [Differential privacy in machine learning](https://www.google.com/search?tbm=isch&q=Differential+privacy+in+machine+learning)
+- [Differential privacy graph](https://www.google.com/search?tbm=isch&q=Differential+privacy+graph)
+- [AI model robustness techniques](https://www.google.com/search?tbm=isch&q=AI+model+robustness+techniques)
+- [Model hardening security](https://www.google.com/search?tbm=isch&q=Model+hardening+security)
+- [Federated learning security](https://www.google.com/search?tbm=isch&q=Federated+learning+security)
+
+**Category 4: Testing & Evaluation (Related to LO3)**
+- [AI Red Teaming framework](https://www.google.com/search?tbm=isch&q=AI+Red+Teaming+framework)
+- [Penetration testing AI systems](https://www.google.com/search?tbm=isch&q=Penetration+testing+AI+systems)
+- [Adversarial example generation](https://www.google.com/search?tbm=isch&q=Adversarial+example+generation)
+- [AI model robustness evaluation](https://www.google.com/search?tbm=isch&q=AI+model+robustness+evaluation)
+- [Security vs Accuracy tradeoff graph](https://www.google.com/search?tbm=isch&q=Security+vs+Accuracy+tradeoff+graph)
+- [AI incident response](https://www.google.com/search?tbm=isch&q=AI+incident+response)
+
+**Category 5: Combining Concepts for Precision**
+- ["Adversarial training" defense "evasion attack"](https://www.google.com/search?tbm=isch&q=%22Adversarial+training%22+defense+%22evasion+attack%22)
+- ["Differential privacy" protects "data poisoning"](https://www.google.com/search?tbm=isch&q=%22Differential+privacy%22+protects+%22data+poisoning%22)
+- [Detecting "model extraction" attacks](https://www.google.com/search?tbm=isch&q=Detecting+%22model+extraction%22+attacks)
+- ["AI Security" dashboard metrics](https://www.google.com/search?tbm=isch&q=%22AI+Security%22+dashboard+metrics)
+- ["Robustness" evaluation "adversarial examples"](https://www.google.com/search?tbm=isch&q=%22Robustness%22+evaluation+%22adversarial+examples%22)
+- ["Machine Learning" "threat model" "STRIDE"](https://www.google.com/search?tbm=isch&q=%22Machine+Learning%22+%22threat+model%22+%22STRIDE%22)
+
+**Category 6: Real-World & Metaphorical Searches**
+- [AI Security shield icon](https://www.google.com/search?tbm=isch&q=AI+Security+shield+icon)
+- [Hacker attacking AI brain](https://www.google.com/search?tbm=isch&q=Hacker+attacking+AI+brain)
+- [Poisoned data barrel](https://www.google.com/search?tbm=isch&q=Poisoned+data+barrel)
+- [Lock icon on neural network](https://www.google.com/search?tbm=isch&q=Lock+icon+on+neural+network)
+
+**Note:** The URLs use proper URL encoding for quotes and spaces. You can copy-paste these directly into your browser or use them in documentation. The `tbm=isch` parameter specifically triggers Google Images search results.
