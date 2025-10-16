@@ -1,3 +1,4 @@
 - question : 🏋️ adversarial training
 - hint : Consider training methods that use malicious examples to strengthen models
 - answer : A defense mechanism that strengthens AI models by training them on both normal data and adversarial examples, creating inherent resilience against attacks
+- reference : <a href="https://www.youtube.com/watch?v=cif_eC-eA-s" target="_blank">Adversarial Training | MIT 6.S191</a>
