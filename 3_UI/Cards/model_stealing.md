@@ -1,2 +1,2 @@
-- question : model stealing
+- question : 🕵️ model stealing
 - answer : A type of attack where adversaries use query access to extract knowledge from a machine learning model, essentially creating an unauthorized copy of the model's functionality

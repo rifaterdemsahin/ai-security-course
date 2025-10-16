@@ -1,2 +1,2 @@
-- question : evasion attack
+- question : 🏃 evasion attack
 - answer : A type of adversarial attack where an attacker modifies input data at test time to cause the AI model to make incorrect predictions

@@ -1,2 +1,2 @@
-- question : FGSM
+- question : ⚡ FGSM
 - answer : Fast Gradient Sign Method - A simple adversarial attack algorithm that generates adversarial examples by taking a single step in the direction of the gradient to maximize loss

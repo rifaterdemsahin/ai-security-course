@@ -1,2 +1,2 @@
-- question : differential privacy
+- question : 🤫 differential privacy
 - answer : A mathematical framework that adds calibrated noise to data or model outputs to protect individual privacy while maintaining statistical utility for analysis

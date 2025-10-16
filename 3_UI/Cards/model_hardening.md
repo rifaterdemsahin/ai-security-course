@@ -1,2 +1,2 @@
-- question : model hardening
+- question : 🧱 model hardening
 - answer : The process of implementing multiple defensive layers and security measures to strengthen an AI model against various attack vectors and improve its overall security posture
