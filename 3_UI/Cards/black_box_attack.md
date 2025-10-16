@@ -1,0 +1,2 @@
+- question : black-box attack
+- answer : An adversarial attack method where the attacker has no knowledge of the target model's internal structure, parameters, or training data, relying only on input-output queries

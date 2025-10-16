@@ -1,0 +1,2 @@
+- question : defense in depth
+- answer : A security strategy that employs multiple layers of defensive mechanisms to protect AI systems, ensuring that if one defense fails, others remain to protect the system

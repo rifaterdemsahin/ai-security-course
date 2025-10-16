@@ -1,0 +1,2 @@
+- question : PGD
+- answer : Projected Gradient Descent - A more sophisticated iterative adversarial attack method that takes multiple steps to find stronger adversarial examples within a specified perturbation budget

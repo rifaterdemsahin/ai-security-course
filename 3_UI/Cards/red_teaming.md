@@ -1,0 +1,2 @@
+- question : red teaming
+- answer : A systematic security testing methodology where a team simulates adversarial attacks to identify vulnerabilities and test the effectiveness of defensive measures in AI systems

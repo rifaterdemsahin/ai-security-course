@@ -1,168 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Security Course - Interactive Learning Platform</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <!-- Custom CSS -->
+    <title>AI Security Course - File List</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="footer.css">
-    <script src="pageConfig.js"></script>
-    <script src="templateBuilder.js"></script>
+    <script src="menu.js"></script>
+    <script src="footer.js"></script>
 </head>
 <body>
-    <!-- Navigation Menu -->
     <div id="menu-container"></div>
-    
-    <!-- Build Status -->
-    <div data-build-status></div>
-
-    <!-- Main Content -->
-    <div class="container my-4">
-        <!-- Hero Section -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="bg-primary text-white p-4 rounded-3 text-center">
-                    <h1 class="display-4 fw-bold mb-3">
-                        <i class="bi bi-shield-check me-3"></i>
-                        AI Security Course
-                    </h1>
-                    <p class="lead mb-3">Master the Art of Securing Artificial Intelligence Systems</p>
-                    <div class="d-flex justify-content-center gap-3 flex-wrap">
-                        <a href="Lessons/Lesson 1/index.html" class="btn btn-light btn-lg">
-                            <i class="bi bi-play-circle me-2"></i>Start Learning
-                        </a>
-                        <a href="https://github.com/rifaterdemsahin/ai-security-course" target="_blank" class="btn btn-outline-light btn-lg">
-                            <i class="bi bi-github me-2"></i>View Source
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Lessons Overview -->
-        <div class="row g-4 mb-5">
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-primary">
-                    <div class="card-body text-center d-flex flex-column">
-                        <i class="bi bi-shield-exclamation display-1 text-primary mb-3"></i>
-                        <h4>Lesson 1: The Attacker's Playbook</h4>
-                        <p class="text-muted flex-grow-1">Understanding AI Vulnerabilities</p>
-                        <a href="Lessons/Lesson 1/index.html" class="btn btn-primary">
-                            <i class="bi bi-book me-2"></i>Start Lesson 1
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-success">
-                    <div class="card-body text-center d-flex flex-column">
-                        <i class="bi bi-shield-check display-1 text-success mb-3"></i>
-                        <h4>Lesson 2: Building the Shield</h4>
-                        <p class="text-muted flex-grow-1">Proactive Defense Strategies</p>
-                        <a href="Lessons/Lesson 2/index.html" class="btn btn-success">
-                            <i class="bi bi-shield-plus me-2"></i>Start Lesson 2
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 mx-auto">
-                <div class="card h-100 border-danger">
-                    <div class="card-body text-center d-flex flex-column">
-                        <i class="bi bi-bug display-1 text-danger mb-3"></i>
-                        <h4>Lesson 3: Adversarial Testing</h4>
-                        <p class="text-muted flex-grow-1">Continuous Security Cycle</p>
-                        <a href="Lessons/Lesson 3/index.html" class="btn btn-danger">
-                            <i class="bi bi-bug me-2"></i>Start Lesson 3
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Course Resources -->
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header bg-light">
-                        <h2 class="card-title mb-0">
-                            <i class="bi bi-folder me-2"></i>Course Resources & Documentation
-                        </h2>
-                    </div>
-                    <div class="card-body">
-                        <div class="row g-3">
-                            <div class="col-md-6 col-lg-3">
-                                <div class="card bg-light h-100">
-                                    <div class="card-body text-center">
-                                        <i class="bi bi-bullseye display-4 text-primary mb-2"></i>
-                                        <h6>📁 Root & 1_Real</h6>
-                                        <div class="d-grid gap-1">
-                                            <a href="renderer.html?file=../README.md" class="btn btn-outline-primary btn-sm">README.md</a>
-                                            <a href="renderer.html?file=../1_real/okrs.md" class="btn btn-outline-primary btn-sm">OKRs</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-lg-3">
-                                <div class="card bg-light h-100">
-                                    <div class="card-body text-center">
-                                        <i class="bi bi-gear display-4 text-success mb-2"></i>
-                                        <h6>⚙️ 2_Environment</h6>
-                                        <div class="d-grid gap-1">
-                                            <a href="renderer.html?file=../2_Environment/github.md" class="btn btn-outline-success btn-sm">GitHub Setup</a>
-                                            <a href="renderer.html?file=../2_Environment/local_development.md" class="btn btn-outline-success btn-sm">Local Dev</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-lg-3">
-                                <div class="card bg-light h-100">
-                                    <div class="card-body text-center">
-                                        <i class="bi bi-calculator display-4 text-info mb-2"></i>
-                                        <h6>🧪 4_Formulas</h6>
-                                        <div class="d-grid gap-1">
-                                            <a href="renderer.html?file=../4_formulas/outline/_outline.md" class="btn btn-outline-info btn-sm">Course Outline</a>
-                                            <a href="renderer.html?file=../4_formulas/outline/module1.md" class="btn btn-outline-info btn-sm">Module 1</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-lg-3">
-                                <div class="card bg-light h-100">
-                                    <div class="card-body text-center">
-                                        <i class="bi bi-flask display-4 text-danger mb-2"></i>
-                                        <h6>🔬 More Resources</h6>
-                                        <div class="d-grid gap-1">
-                                            <a href="renderer.html?file=../6_Semblance/README.md" class="btn btn-outline-secondary btn-sm">6_Semblance</a>
-                                            <a href="renderer.html?file=../7_Testing/README.md" class="btn btn-outline-danger btn-sm">7_Testing</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Legacy File List (Collapsible) -->
-                        <div class="mt-4">
-                            <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#legacyFiles" aria-expanded="false" aria-controls="legacyFiles">
-                                <i class="bi bi-list me-2"></i>View All Files (Legacy)
-                            </button>
-                            <div class="collapse mt-3" id="legacyFiles">
-                                <div class="card card-body bg-light">
-                                    <h5>All Markdown Files</h5>
+    <main>
+        <h2>Markdown Files</h2>
         <ul>
 <li>📁 root<ul>
 <li><a href="renderer.html?file=../README.md">README.md</a></li>
+<li><a href="renderer.html?file=../REFACTORING_SUMMARY.md">REFACTORING_SUMMARY.md</a></li>
 <li><a href="renderer.html?file=../gemini.md">gemini.md</a></li>
 </ul></li>
 <li>🎯 1_real<ul>
@@ -177,6 +30,10 @@
 <li>🎨 3_UI<ul>
 <li><a href="renderer.html?file=../3_UI/README.md">README.md</a></li>
 </ul></li>
+<li>🗂️ 3_UI/Cards<ul>
+<li><a href="renderer.html?file=../3_UI/Cards/_readme.md">_readme.md</a></li>
+<li><a href="renderer.html?file=../3_UI/Cards/llm.md">llm.md</a></li>
+</ul></li>
 <li>🧪 4_formulas<ul>
 <li><a href="renderer.html?file=../4_formulas/README.md">README.md</a></li>
 </ul></li>
@@ -190,6 +47,10 @@
 <li><a href="renderer.html?file=../4_formulas/outline/module3.md">module3.md</a></li>
 <li><a href="renderer.html?file=../4_formulas/outline/outline_summary.md">outline_summary.md</a></li>
 </ul></li>
+<li>📜 4_formulas/script<ul>
+<li><a href="renderer.html?file=../4_formulas/script/script_components.md">script_components.md</a></li>
+<li><a href="renderer.html?file=../4_formulas/script/whole_Script.md">whole_Script.md</a></li>
+</ul></li>
 <li>📌 5_Symbols<ul>
 <li><a href="renderer.html?file=README.md">README.md</a></li>
 </ul></li>
@@ -199,25 +60,11 @@
 <li>🔬 7_Testing<ul>
 <li><a href="renderer.html?file=../7_Testing/README.md">README.md</a></li>
 </ul></li>
+<li>🗂️ cards<ul>
+<li><a href="renderer.html?file=../cards/technical_terms.md">technical_terms.md</a></li>
+</ul></li>
 </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
+    </main>
     <div id="footer-container"></div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom JS -->
-    <script src="menu.js"></script>
-    <script src="footer.js"></script>
-    <script src="buildStatus.js"></script>
 </body>
 </html>

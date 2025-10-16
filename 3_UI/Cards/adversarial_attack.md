@@ -1,0 +1,2 @@
+- question : adversarial attack
+- answer : A malicious input designed to fool AI models by adding imperceptible perturbations that cause misclassification while appearing normal to humans

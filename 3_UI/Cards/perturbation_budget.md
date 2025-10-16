@@ -1,0 +1,2 @@
+- question : perturbation budget
+- answer : The maximum allowed amount of modification that can be applied to an input when creating adversarial examples, typically measured as L2 or L-infinity norm distance

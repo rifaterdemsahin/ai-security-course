@@ -1,0 +1,2 @@
+- question : adversarial patch
+- answer : A physical or digital pattern that can be attached to objects to fool computer vision models, acting like an "invisibility cloak" that causes misclassification

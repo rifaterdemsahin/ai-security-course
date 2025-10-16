@@ -1,0 +1,2 @@
+- question : AI security lifecycle
+- answer : A continuous process of diagnosing threats, implementing defenses, and validating security measures to maintain AI system resilience against evolving adversarial tactics
