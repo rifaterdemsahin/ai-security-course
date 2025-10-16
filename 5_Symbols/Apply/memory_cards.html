@@ -68,6 +68,18 @@
             line-height: 1.4;
         }
         
+        .card-hint {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 10px;
+            margin: 15px 0;
+            border-left: 3px solid #ffc107;
+        }
+        
+        .card-hint i {
+            color: #ffc107;
+        }
+        
         .controls {
             text-align: center;
             margin: 30px 0;
@@ -350,6 +362,19 @@
             if (isFlipped && studyMode) {
                 // In study mode, just enable next button
                 document.getElementById('next-btn').disabled = false;
+            }
+        }
+        
+        function toggleHint() {
+            const hintElement = document.getElementById('card-hint');
+            const hintBtn = document.getElementById('hint-btn');
+            
+            if (hintElement.style.display === 'none') {
+                hintElement.style.display = 'block';
+                hintBtn.innerHTML = '<i class="bi bi-lightbulb-fill"></i> Hide Hint';
+            } else {
+                hintElement.style.display = 'none';
+                hintBtn.innerHTML = '<i class="bi bi-lightbulb"></i> Show Hint';
             }
         }
         
