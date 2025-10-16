@@ -1,2 +1,3 @@
 - question : 🧱 model hardening
+- hint : Think about strengthening AI models against various security threats
 - answer : The process of implementing multiple defensive layers and security measures to strengthen an AI model against various attack vectors and improve its overall security posture

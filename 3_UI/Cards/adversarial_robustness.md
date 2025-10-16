@@ -1,2 +1,5 @@
+```markdown
 - question : 🛡️ adversarial robustness
-- answer : The ability of an AI model to maintain accurate predictions when faced with adversarial examples or maliciously crafted inputs designed to cause misclassification
+- hint : Think about how well a model can resist malicious attacks
+- answer : The ability of an AI model to maintain correct predictions despite adversarial perturbations or malicious inputs
+```

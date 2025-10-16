@@ -1,2 +1,3 @@
 - question : 🤖 llm
+- hint : Think about AI systems trained on vast amounts of text data
 - answer : Large Language Model

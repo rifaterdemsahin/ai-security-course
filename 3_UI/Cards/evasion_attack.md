@@ -1,2 +1,3 @@
 - question : 🏃 evasion attack
+- hint : Think about modifying inputs at test time to fool AI models
 - answer : A type of adversarial attack where an attacker modifies input data at test time to cause the AI model to make incorrect predictions

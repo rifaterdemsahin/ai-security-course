@@ -1,2 +1,3 @@
 - question : 🚶 PGD
+- hint : Think about an iterative attack method that takes multiple gradient steps
 - answer : Projected Gradient Descent - A more sophisticated iterative adversarial attack method that takes multiple steps to find stronger adversarial examples within a specified perturbation budget

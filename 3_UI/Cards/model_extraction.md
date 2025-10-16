@@ -1,2 +1,3 @@
 - question : 🔍 model extraction attack
+- hint : Consider stealing a model's functionality by querying it extensively
 - answer : A type of attack where an attacker queries a black-box AI model to steal its functionality and create a surrogate copy without access to the original training data or parameters

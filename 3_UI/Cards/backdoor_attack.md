@@ -1,2 +1,3 @@
 - question : 🚪 backdoor attack
+- hint : Consider hidden malicious functionality that activates only with specific triggers
 - answer : A type of data poisoning attack where malicious triggers are embedded in the training data, causing the model to behave normally except when the specific trigger is present

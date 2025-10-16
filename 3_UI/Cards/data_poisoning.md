@@ -1,2 +1,3 @@
 - question : 🧪 data poisoning
+- hint : Consider injecting malicious data into training datasets to compromise model behavior
 - answer : An attack where malicious data is injected into the training dataset to compromise the AI model's behavior, creating hidden backdoors that activate on specific triggers

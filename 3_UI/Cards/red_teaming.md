@@ -1,2 +1,3 @@
 - question : 🔴 red teaming
+- hint : Think about simulating adversarial attacks to test system security
 - answer : A systematic security testing methodology where a team simulates adversarial attacks to identify vulnerabilities and test the effectiveness of defensive measures in AI systems
