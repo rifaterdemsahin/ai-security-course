@@ -6,10 +6,137 @@
     <title>Lesson 1: The Attacker's Playbook - Understanding AI Vulnerabilities</title>
     <link rel="stylesheet" href="../../style.css">
     <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .top-nav {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            padding: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .nav-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 15px 0;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 10px;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.2);
+            border-bottom: 3px solid #667eea;
+        }
+
+        .lesson-badge {
+            background: #667eea;
+            color: white;
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+
+        .home-link {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            padding: 8px 15px;
+            margin-right: 15px;
+        }
+
         .lesson-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+        }
+
+        .build-status {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .build-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .build-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .deploy-time {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .github-link {
+            color: white;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .github-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
         
         .lesson-header {
@@ -88,7 +215,48 @@
     </style>
 </head>
 <body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-brand">🛡️ AI Security Course</a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-link home-link">🏠 Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../Lesson 1/index.html" class="nav-link active">
+                        📚 Lesson 1: Attacker's Playbook
+                        <span class="lesson-badge">Vulnerabilities</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../Lesson 2/index.html" class="nav-link">
+                        🛡️ Lesson 2: Building the Shield
+                        <span class="lesson-badge" style="background: #28a745;">Defenses</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../Lesson 3/index.html" class="nav-link">
+                        🔴 Lesson 3: Adversarial Testing
+                        <span class="lesson-badge" style="background: #dc3545;">Testing</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="lesson-container">
+        <!-- Build Status Section -->
+        <div class="build-status">
+            <div class="build-info">
+                <span class="build-badge">✅ Build Status: Deployed</span>
+                <span class="deploy-time">Last Deployed: <span id="deploy-time">2025-10-16 04:14:27 UTC</span></span>
+            </div>
+            <a href="https://github.com/rifaterdemsahin/ai-security-course/tree/main" target="_blank" class="github-link">
+                📱 View on GitHub
+            </a>
+        </div>
         <div class="lesson-header">
             <h1>Lesson 1: The Attacker's Playbook</h1>
             <p>Understanding AI Vulnerabilities</p>
@@ -301,5 +469,34 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        // Dynamic build status and deployment time
+        function updateBuildStatus() {
+            const deployTimeElement = document.getElementById('deploy-time');
+            
+            // Set the base deployment time (this could be replaced by GitHub Actions)
+            const baseDeployTime = '2025-10-16 04:14:27 UTC';
+            
+            // You can make this dynamic by fetching from GitHub API or build system
+            // For now, we'll use the provided time but make it updateable
+            deployTimeElement.textContent = baseDeployTime;
+            
+            // Optional: Add real-time updates or fetch from GitHub API
+            // fetch('https://api.github.com/repos/rifaterdemsahin/ai-security-course/commits/main')
+            //     .then(response => response.json())
+            //     .then(data => {
+            //         const lastCommitTime = new Date(data.commit.committer.date).toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
+            //         deployTimeElement.textContent = lastCommitTime;
+            //     })
+            //     .catch(error => console.log('Could not fetch latest commit time'));
+        }
+
+        // Update build status when page loads
+        document.addEventListener('DOMContentLoaded', updateBuildStatus);
+
+        // Optional: Update every 5 minutes
+        // setInterval(updateBuildStatus, 300000);
+    </script>
 </body>
 </html>
