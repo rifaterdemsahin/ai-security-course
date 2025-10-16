@@ -4,15 +4,15 @@
     <title>Markdown Renderer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="footer.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="menu.js"></script>
+    <script src="footer.js"></script>
 </head>
 <body>
     <div id="menu-container"></div>
     <main id="content"></main>
-    <footer>
-        <p>&copy; 2025 AI Security Course</p>
-    </footer>
+    <div id="footer-container"></div>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const file = urlParams.get('file');

@@ -12,16 +12,316 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../menu.css">
+    <link rel="stylesheet" href="../../footer.css">
+    <script src="../../footer.js"></script>
 </head>
 <body>
+    <!-- Navigation Menu -->
     <div id="menu-container"></div>
-    <main>
-        <h1>Lesson 2: Building the Shield</h1>
-        <p>Content for Lesson 2 will go here.</p>
-    </main>
-    <footer>
-        <p>&copy; 2025 AI Security Course</p>
-    </footer>
+    
+    <!-- Build Status -->
+    <div class="container-fluid">
+        <div class="alert alert-success d-flex justify-content-between align-items-center mb-0" role="alert">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <span class="fw-bold">Build Status: Deployed</span>
+                <span class="ms-3 text-muted">Last Deployed: <span id="deploy-time">2025-10-16 04:14:27 UTC</span></span>
+            </div>
+            <a href="https://github.com/rifaterdemsahin/ai-security-course/tree/main" target="_blank" class="btn btn-outline-success btn-sm">
+                <i class="bi bi-github me-1"></i>View on GitHub
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-4">
+        <!-- Lesson Header -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="bg-success text-white p-4 rounded-3 text-center">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="bi bi-shield-check me-2"></i>
+                        Lesson 2: Building the Shield
+                    </h1>
+                    <p class="lead mb-3">Proactive Defense Strategies</p>
+                    <div class="badge bg-light text-dark fs-6 px-3 py-2">
+                        <i class="bi bi-clock me-1"></i>Duration: 60 minutes | Learning Objective: LO2
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tell Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card border-success">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="card-title mb-0">
+                            <i class="bi bi-book me-2"></i>Tell: Understanding Defense Mechanisms
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info">
+                            <h4><i class="bi bi-target me-2"></i>Learning Objectives</h4>
+                            <p>By the end of this lesson, you will be able to:</p>
+                            <ul class="mb-0">
+                                <li>Implement robust defense mechanisms like adversarial training and differential privacy</li>
+                                <li>Configure input sanitization and preprocessing pipelines</li>
+                                <li>Evaluate trade-offs between security, privacy, and model performance</li>
+                                <li>Design defense-in-depth security architectures</li>
+                            </ul>
+                        </div>
+
+                        <h3>Core Defense Strategies</h3>
+                        
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="mb-0"><i class="bi bi-shield-plus me-2"></i>Adversarial Training</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="alert alert-warning">
+                                            <strong>The Immunity Principle:</strong> Turn AI's weakness into strength.
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">"Vaccinating" your model against attacks</li>
+                                            <li class="list-group-item">Generating adversarial examples for training</li>
+                                            <li class="list-group-item">Trade-offs between robustness and accuracy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 border-warning">
+                                    <div class="card-header bg-warning">
+                                        <h5 class="mb-0"><i class="bi bi-funnel me-2"></i>Input Sanitization</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="alert alert-info">
+                                            <strong>The Gatekeeper Strategy:</strong> Simple but powerful protection.
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Input validation techniques</li>
+                                            <li class="list-group-item">Statistical outlier detection</li>
+                                            <li class="list-group-item">Preprocessing pipelines</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 border-info">
+                                    <div class="card-header bg-info text-white">
+                                        <h5 class="mb-0"><i class="bi bi-lock me-2"></i>Differential Privacy</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="alert alert-success">
+                                            <strong>Privacy by Design:</strong> Insights + Privacy simultaneously.
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Mathematical privacy foundation</li>
+                                            <li class="list-group-item">Noise injection for protection</li>
+                                            <li class="list-group-item">Privacy-utility trade-offs</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Show Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card border-info">
+                    <div class="card-header bg-info text-white">
+                        <h2 class="card-title mb-0">
+                            <i class="bi bi-eye me-2"></i>Show: Defense Implementation Examples
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body">
+                                        <h5><i class="bi bi-car-front me-2"></i>Coach Dialogue: The Pre-Mortem</h5>
+                                        <p>Scenario: AI Security Architect for autonomous vehicle company.</p>
+                                        <div class="badge bg-info">Duration: 10-15 minutes</div>
+                                        <p class="mt-2 small"><strong>Key Skill:</strong> Proactive security thinking before deployment</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body">
+                                        <h5><i class="bi bi-apple me-2"></i>Apple's Differential Privacy</h5>
+                                        <p>Real-world case study: iOS keyboard privacy protection implementation.</p>
+                                        <ul class="small">
+                                            <li>Technical implementation details</li>
+                                            <li>Privacy guarantees provided</li>
+                                            <li>Performance impact analysis</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Do Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card border-warning">
+                    <div class="card-header bg-warning">
+                        <h2 class="card-title mb-0">
+                            <i class="bi bi-tools me-2"></i>Do: Hands-On Defense Implementation
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body">
+                                        <h5><i class="bi bi-shield-plus me-2"></i>Adversarial Training Lab</h5>
+                                        <ul class="small">
+                                            <li>Generate adversarial examples using FGSM/PGD</li>
+                                            <li>Train robust model and measure improvement</li>
+                                            <li>Compare accuracy vs. robustness trade-offs</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body">
+                                        <h5><i class="bi bi-funnel me-2"></i>Input Sanitization Pipeline</h5>
+                                        <ul class="small">
+                                            <li>Implement statistical outlier detection</li>
+                                            <li>Create image denoising filters</li>
+                                            <li>Test against adversarial examples</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apply Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card border-danger">
+                    <div class="card-header bg-danger text-white">
+                        <h2 class="card-title mb-0">
+                            <i class="bi bi-rocket me-2"></i>Apply: Production-Ready Defense System
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-warning">
+                            <h4>Capstone Project: Secure AI System Design</h4>
+                            <p class="mb-0">Design and implement a production-ready AI system with comprehensive security defenses.</p>
+                        </div>
+                        
+                        <div class="row g-3">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-bullseye display-4 text-primary mb-2"></i>
+                                        <h6>Domain Selection</h6>
+                                        <p class="small">Choose high-stakes AI application</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-shield-check display-4 text-success mb-2"></i>
+                                        <h6>Security Requirements</h6>
+                                        <p class="small">Define comprehensive requirements</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-diagram-3 display-4 text-warning mb-2"></i>
+                                        <h6>Architecture Design</h6>
+                                        <p class="small">Create detailed system architecture</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-check-square display-4 text-info mb-2"></i>
+                                        <h6>Security Validation</h6>
+                                        <p class="small">Validate defense implementation</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Check -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title mb-0">
+                            <i class="bi bi-graph-up me-2"></i>Progress Check
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Before moving to Lesson 3, ensure you can:</p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Implement adversarial training for model robustness</li>
+                                    <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Design effective input sanitization pipelines</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Apply differential privacy to protect sensitive data</li>
+                                    <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Create defense-in-depth security architectures</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
     <script src="../../menu.js"></script>
+    
+    <!-- Dynamic Build Status -->
+    <script>
+        function updateBuildStatus() {
+            const deployTimeElement = document.getElementById('deploy-time');
+            if (deployTimeElement) {
+                const baseDeployTime = '2025-10-16 04:14:27 UTC';
+                deployTimeElement.textContent = baseDeployTime;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', updateBuildStatus);
+    </script>
 </body>
 </html>
