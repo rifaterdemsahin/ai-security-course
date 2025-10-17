@@ -33,21 +33,62 @@ function initializeSearch() {
         
         // Show search results container and hide main content
         if (searchResultsContainer) {
-            searchResultsContainer.classList.add('show');
-            searchResultsContainer.style.display = 'block';
+            searchResultsContainer.classList.remove('search-results-hidden');
+            searchResultsContainer.classList.add('search-results-visible');
         }
         if (mainContent) {
             mainContent.style.display = 'none';
         }
 
-        fetch('search.json')
-            .then(response => response.json())
-            .then(data => displayResults(data, query))
+        // Determine the correct path to search.json based on current location
+        const currentPath = window.location.pathname;
+        let searchJsonPath = 'search.json';
+        
+        if (currentPath.includes('/ai-security-course/')) {
+            // We're on GitHub Pages
+            if (currentPath.includes('5_Symbols/')) {
+                searchJsonPath = './search.json';
+            } else {
+                searchJsonPath = '/ai-security-course/5_Symbols/search.json';
+            }
+        } else if (currentPath.includes('/5_Symbols/')) {
+            // We're in 5_Symbols directory structure
+            if (currentPath.includes('Lessons/')) {
+                searchJsonPath = '../../search.json';
+            } else if (currentPath.includes('Apply/')) {
+                searchJsonPath = '../search.json';
+            } else {
+                searchJsonPath = './search.json';
+            }
+        } else {
+            // We're at root level
+            searchJsonPath = '5_Symbols/search.json';
+        }
+
+        console.log('Fetching search data from:', searchJsonPath);
+
+        fetch(searchJsonPath)
+            .then(response => {
+                console.log('Search response status:', response.status);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Search data loaded:', data);
+                displayResults(data, query);
+            })
             .catch(error => {
                 console.error('Error fetching search results:', error);
                 const searchResultsContent = document.getElementById('search-results-content');
                 if (searchResultsContent) {
-                    searchResultsContent.innerHTML = '<div class="alert alert-danger"><i class="bi bi-exclamation-triangle me-2"></i>Error loading search results.</div>';
+                    searchResultsContent.innerHTML = `
+                        <div class="alert alert-danger">
+                            <i class="bi bi-exclamation-triangle me-2"></i>
+                            Error loading search results: ${error.message}
+                            <br><small>Attempted to fetch from: ${searchJsonPath}</small>
+                        </div>`;
                 }
             });
     }
@@ -294,8 +335,8 @@ function clearSearch() {
     const searchInput = document.getElementById('search-input');
     
     if (searchResultsContainer) {
-        searchResultsContainer.classList.remove('show');
-        searchResultsContainer.style.display = 'none';
+        searchResultsContainer.classList.remove('search-results-visible');
+        searchResultsContainer.classList.add('search-results-hidden');
     }
     if (mainContent) {
         mainContent.style.display = 'block';

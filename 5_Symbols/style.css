@@ -233,6 +233,15 @@ a:hover {
 .border-dark { border-color: #212529 !important; }
 .border-muted { border-color: #adb5bd !important; }
 
+/* Search Results Visibility */
+.search-results-hidden {
+    display: none !important;
+}
+
+.search-results-visible {
+    display: block !important;
+}
+
 /* Legacy styles for compatibility */
 ul {
     list-style-type: none;
