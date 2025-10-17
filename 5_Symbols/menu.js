@@ -75,6 +75,12 @@ function loadMenu() {
                             <span class="lesson-badge d-none d-xl-inline" style="background: #6f42c1;">Practice</span>
                         </a>
                     </li>
+                    <li class="nav-item nav-search">
+                        <form id="search-form" class="d-flex">
+                            <input id="search-input" class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                    </li>
                 </ul>
             </div>
         </nav>
