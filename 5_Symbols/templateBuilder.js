@@ -40,7 +40,7 @@ class TemplateBuilder {
             <div class="d-flex align-items-center">
                 <i class="bi bi-check-circle-fill me-2"></i>
                 <span class="fw-bold">Build Status: Deployed</span>
-                <span class="ms-3 text-muted">Last Deployed: <span id="deploy-time">2025-10-16 04:14:27 UTC</span></span>
+                <span class="ms-3 text-muted">Last Deployed: <span id="deploy-time">__DEPLOY_TIME__</span></span>
             </div>
             <a href="https://github.com/rifaterdemsahin/ai-security-course/tree/main" target="_blank" class="btn btn-outline-success btn-sm">
                 <i class="bi bi-github me-1"></i>View on GitHub
