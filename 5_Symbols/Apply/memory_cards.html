@@ -492,6 +492,9 @@
                 existingModal.remove();
             }
             
+            // Convert embed URL to regular YouTube URL for the link
+            const watchUrl = card.videoUrl.replace('/embed/', '/watch?v=');
+            
             // Create new modal for current card
             const videoModal = document.createElement('div');
             videoModal.className = 'modal fade';
@@ -515,8 +518,24 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <div class="d-flex align-items-center gap-2 p-3 bg-light rounded">
+                                        <i class="bi bi-link-45deg text-primary"></i>
+                                        <strong>Direct Link:</strong>
+                                        <a href="${watchUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">
+                                            <i class="bi bi-box-arrow-up-right me-1"></i>Open Video in New Tab
+                                        </a>
+                                        <small class="text-muted ms-auto">Opens YouTube in a new window</small>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-12">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-tv text-primary me-2"></i>
+                                        <strong>Embedded Video:</strong>
+                                    </div>
                                     <div class="ratio ratio-16x9">
                                         <iframe 
                                             src="${card.videoUrl}" 
@@ -541,6 +560,9 @@
                             </div>
                         </div>
                         <div class="modal-footer">
+                            <a href="${watchUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary me-auto">
+                                <i class="bi bi-youtube me-1"></i>YouTube
+                            </a>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-primary" onclick="goToNextCardFromVideo()">
                                 Next Card <i class="bi bi-arrow-right"></i>
