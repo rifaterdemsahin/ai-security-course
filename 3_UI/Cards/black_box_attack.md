@@ -1,3 +1,4 @@
 - question : ⬛ black-box attack
 - hint : Think about attacking a model when you can only see inputs and outputs, not internal details
 - answer : An adversarial attack method where the attacker has no knowledge of the target model's internal structure, parameters, or training data, relying only on input-output queries
+- reference : <a href="https://www.youtube.com/watch?v=G5azQ6LGlRU" target="_blank">Black Box Adversarial Attacks Explained</a>

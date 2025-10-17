@@ -1,3 +1,4 @@
 - question : ⚡ FGSM
 - hint : Think about a fast method using gradients to create adversarial examples
 - answer : Fast Gradient Sign Method - A simple adversarial attack algorithm that generates adversarial examples by taking a single step in the direction of the gradient to maximize loss
+- reference : <a href="https://www.youtube.com/watch?v=p_i32sJc2-A" target="_blank">This Tiny Change BREAKS AI | FGSM Adversarial Attack Explained</a>
