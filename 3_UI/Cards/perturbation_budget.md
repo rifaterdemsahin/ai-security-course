@@ -3,3 +3,4 @@
 - answer : The maximum allowed amount of modification that can be applied to an input when creating adversarial examples, typically measured as L2 or L-infinity norm distance
 - youtubereference : <a href="https://www.youtube.com/watch?v=nNk8QSSiVQk" target="_blank">Understanding Perturbation Budgets in Adversarial Attacks</a>
 - googleimages : <a href="https://www.google.com/search?q=💰+perturbation+budget+AI+security+machine+learning&tbm=isch" target="_blank">💰 Perturbation Budget Examples and Visualizations</a>
+- readingreference : <a href="https://www.google.com/search?q=perturbation budget+AI+security+research+papers" target="_blank">perturbation budget Research Papers and Articles</a>

@@ -3,3 +3,4 @@
 - answer : A type of attack where adversaries use query access to extract knowledge from a machine learning model, essentially creating an unauthorized copy of the model's functionality
 - youtubereference : <a href="https://www.youtube.com/watch?v=bOKhis2pCWE" target="_blank">Model Extraction Attacks on Machine Learning</a>
 - googleimages : <a href="https://www.google.com/search?q=🕵️+model+stealing+AI+security+machine+learning&tbm=isch" target="_blank">🕵️ Model Stealing Examples and Visualizations</a>
+- readingreference : <a href="https://www.google.com/search?q=model stealing+AI+security+research+papers" target="_blank">model stealing Research Papers and Articles</a>

@@ -3,3 +3,4 @@
 - answer : A defense mechanism that strengthens AI models by training them on both normal data and adversarial examples, creating inherent resilience against attacks
 - youtubereference : <a href="https://www.youtube.com/watch?v=cif_eC-eA-s" target="_blank">Adversarial Training | MIT 6.S191</a>
 - googleimages : <a href="https://www.google.com/search?q=adversarial+training+machine+learning+defense&tbm=isch" target="_blank">Adversarial Training Process and Defense Mechanisms</a>
+- readingreference : <a href="https://www.google.com/search?q=adversarial training+AI+security+research+papers" target="_blank">adversarial training Research Papers and Articles</a>

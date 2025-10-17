@@ -3,3 +3,4 @@
 - answer : Large Language Model - AI models trained on massive text datasets to understand and generate human-like text, capable of various language tasks
 - youtubereference : <a href="https://www.youtube.com/watch?v=5sLYAQS9sWQ" target="_blank">Large Language Models Explained</a>
 - googleimages : <a href="https://www.google.com/search?q=llm+AI+security+machine+learning&tbm=isch" target="_blank">Llm Examples and Visualizations</a>
+- readingreference : <a href="https://www.google.com/search?q=llm+AI+security+research+papers" target="_blank">llm Research Papers and Articles</a>

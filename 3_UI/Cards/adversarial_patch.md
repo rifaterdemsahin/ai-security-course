@@ -3,3 +3,4 @@
 - answer : A physical sticker or patch that can be placed in the real world to fool computer vision models, causing misclassification when detected
 - youtubereference : <a href="https://www.youtube.com/watch?v=i1sp4X57TL4" target="_blank">Adversarial Patches: Real World Attacks on Machine Learning</a>
 - googleimages : <a href="https://www.google.com/search?q=adversarial+patch+physical+attack+computer+vision&tbm=isch" target="_blank">Adversarial Patch Physical Attack Examples</a>
+- readingreference : <a href="https://www.google.com/search?q=adversarial+patch+AI+security+research+papers" target="_blank">Adversarial Patch Research Papers and Articles</a>

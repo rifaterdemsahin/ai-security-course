@@ -3,3 +3,4 @@
 - answer : An adversarial attack method where the attacker has no knowledge of the target model's internal structure, parameters, or training data, relying only on input-output queries
 - youtubereference : <a href="https://www.youtube.com/watch?v=G5azQ6LGlRU" target="_blank">Black Box Adversarial Attacks Explained</a>
 - googleimages : <a href="https://www.google.com/search?q=black+box+attack+machine+learning+adversarial&tbm=isch" target="_blank">Black Box Attack Methods and Examples</a>
+- readingreference : <a href="https://www.google.com/search?q=black box attack+AI+security+research+papers" target="_blank">black box attack Research Papers and Articles</a>
