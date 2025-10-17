@@ -112,13 +112,19 @@ function displayResults(data, query) {
     if (data.modules) {
         data.modules.forEach(module => {
             if (matchesQuery(module, queryLower, ['title', 'description', 'keywords'])) {
+                const moduleMatch = module.title.match(/Module\s*(\d+)/);
+                let filePath = null;
+                if (moduleMatch && moduleMatch[1]) {
+                    filePath = `4_formulas/outline/module${moduleMatch[1]}.md`;
+                }
                 allResults.push({
                     type: 'Module',
                     title: module.title,
                     description: module.description,
                     icon: 'bi-layers',
                     color: 'primary',
-                    details: `Duration: ${module.duration} | Objective: ${module.objective}`
+                    details: `Duration: ${module.duration} | Objective: ${module.objective}`,
+                    file_path: filePath
                 });
             }
         });
@@ -195,6 +201,11 @@ function displayResults(data, query) {
     if (data.hands_on_labs) {
         data.hands_on_labs.forEach(lab => {
             if (matchesQuery(lab, queryLower, ['title', 'description'])) {
+                const moduleMatch = lab.module.match(/Module\s*(\d+)/);
+                let filePath = null;
+                if (moduleMatch && moduleMatch[1]) {
+                    filePath = `4_formulas/outline/module${moduleMatch[1]}.md`;
+                }
                 allResults.push({
                     type: 'Hands-on Lab',
                     title: lab.title,
@@ -202,7 +213,8 @@ function displayResults(data, query) {
                     icon: 'bi-code-slash',
                     color: 'danger',
                     details: `Duration: ${lab.duration} | ${lab.module}`,
-                    objective: lab.objective
+                    objective: lab.objective,
+                    file_path: filePath
                 });
             }
         });
@@ -212,13 +224,16 @@ function displayResults(data, query) {
     if (data.key_concepts) {
         data.key_concepts.forEach(concept => {
             if (concept.toLowerCase().includes(queryLower)) {
+                const fileName = concept.toLowerCase().replace(/\s+/g, '_') + '.md';
+                const filePath = `3_UI/Cards/${fileName}`;
                 allResults.push({
                     type: 'Key Concept',
                     title: concept,
                     description: 'Core concept in AI Security',
                     icon: 'bi-lightbulb',
                     color: 'dark',
-                    details: 'Concept'
+                    details: 'Concept',
+                    file_path: filePath
                 });
             }
         });
