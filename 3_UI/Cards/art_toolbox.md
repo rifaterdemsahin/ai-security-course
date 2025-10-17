@@ -1,3 +1,4 @@
 - question : 🎨 ART
 - hint : Think about a Python library that provides tools for testing adversarial attacks and defenses
 - answer : Adversarial Robustness Toolbox - An open-source Python library that provides tools for crafting adversarial attacks and implementing defense mechanisms for machine learning models
+- reference : <a href="https://www.youtube.com/watch?v=9Z8QpBZXKIc" target="_blank">Adversarial Robustness Toolbox (ART) Tutorial</a>
