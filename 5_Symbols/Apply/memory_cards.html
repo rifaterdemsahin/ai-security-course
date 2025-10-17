@@ -271,8 +271,8 @@
                     <button class="btn btn-outline-primary btn-card-action" onclick="toggleStudyMode()">
                         <i class="bi bi-book"></i> <span id="study-mode-text">Study Mode</span>
                     </button>
-                    <button class="btn btn-outline-danger btn-card-action" onclick="loadVideo()">
-                        <i class="bi bi-play-circle"></i> Load the Video
+                    <button class="btn btn-outline-danger btn-card-action" onclick="loadCurrentCardVideo()" id="load-video-btn">
+                        <i class="bi bi-play-circle"></i> <span id="video-btn-text">Load the Video</span>
                     </button>
                 </div>
                 
@@ -301,19 +301,19 @@
         
         // Card data extracted from markdown files
         const cardData = [
-            { question: "adversarial attack", hint: "Think about inputs that look normal to humans but confuse AI models", answer: "A malicious input designed to fool AI models by adding imperceptible perturbations that cause misclassification while appearing normal to humans", difficulty: "medium" },
-            { question: "adversarial patch", hint: "Consider physical objects that can fool computer vision in the real world", answer: "A physical sticker or patch that can be placed in the real world to fool computer vision models, causing misclassification when detected", difficulty: "hard" },
-            { question: "adversarial robustness", hint: "Think about how well a model can resist malicious attacks", answer: "The ability of an AI model to maintain correct predictions despite adversarial perturbations or malicious inputs", difficulty: "medium" },
-            { question: "adversarial training", hint: "Consider training methods that use malicious examples to strengthen models", answer: "A defense mechanism that strengthens AI models by training them on both normal data and adversarial examples, creating inherent resilience against attacks", difficulty: "hard" },
+            { question: "adversarial attack", hint: "Think about inputs that look normal to humans but confuse AI models", answer: "A malicious input designed to fool AI models by adding imperceptible perturbations that cause misclassification while appearing normal to humans", difficulty: "medium", videoUrl: "https://www.youtube.com/embed/p_i32sJc2-A", videoTitle: "This Tiny Change BREAKS AI | FGSM Adversarial Attack Explained" },
+            { question: "adversarial patch", hint: "Consider physical objects that can fool computer vision in the real world", answer: "A physical sticker or patch that can be placed in the real world to fool computer vision models, causing misclassification when detected", difficulty: "hard", videoUrl: "https://www.youtube.com/embed/i1sp4X57TL4", videoTitle: "Adversarial Patches Explained" },
+            { question: "adversarial robustness", hint: "Think about how well a model can resist malicious attacks", answer: "The ability of an AI model to maintain correct predictions despite adversarial perturbations or malicious inputs", difficulty: "medium", videoUrl: "https://www.youtube.com/embed/CIfsB_EYsVI", videoTitle: "Adversarial Robustness - Distill" },
+            { question: "adversarial training", hint: "Consider training methods that use malicious examples to strengthen models", answer: "A defense mechanism that strengthens AI models by training them on both normal data and adversarial examples, creating inherent resilience against attacks", difficulty: "hard", videoUrl: "https://www.youtube.com/embed/cif_eC-eA-s", videoTitle: "Adversarial Training | MIT 6.S191" },
             { question: "AI security lifecycle", hint: "Think about the ongoing process of securing AI systems from development to deployment", answer: "A continuous process of diagnosing threats, implementing defenses, and validating security measures to maintain AI system resilience against evolving adversarial tactics", difficulty: "easy" },
             { question: "ART toolbox", hint: "Think about a Python library that provides tools for testing adversarial attacks and defenses", answer: "Adversarial Robustness Toolbox - An open-source Python library that provides tools for crafting adversarial attacks and implementing defense mechanisms for machine learning models", difficulty: "medium" },
-            { question: "backdoor attack", hint: "Consider hidden malicious functionality that activates only with specific triggers", answer: "A type of data poisoning attack where malicious triggers are embedded in the training data, causing the model to behave normally except when the specific trigger is present", difficulty: "hard" },
+            { question: "backdoor attack", hint: "Consider hidden malicious functionality that activates only with specific triggers", answer: "A type of data poisoning attack where malicious triggers are embedded in the training data, causing the model to behave normally except when the specific trigger is present", difficulty: "hard", videoUrl: "https://www.youtube.com/embed/QO4mfpoU-8A", videoTitle: "Backdoor Attacks on Deep Neural Networks" },
             { question: "black box attack", hint: "Think about attacking a model when you can only see inputs and outputs, not internal details", answer: "An adversarial attack method where the attacker has no knowledge of the target model's internal structure, parameters, or training data, relying only on input-output queries", difficulty: "medium" },
-            { question: "data poisoning", hint: "Consider injecting malicious data into training datasets to compromise model behavior", answer: "An attack where malicious data is injected into the training dataset to compromise the AI model's behavior, creating hidden backdoors that activate on specific triggers", difficulty: "hard" },
+            { question: "data poisoning", hint: "Consider injecting malicious data into training datasets to compromise model behavior", answer: "An attack where malicious data is injected into the training dataset to compromise the AI model's behavior, creating hidden backdoors that activate on specific triggers", difficulty: "hard", videoUrl: "https://www.youtube.com/embed/vfJPjnFvGB8", videoTitle: "Data Poisoning Attacks on Machine Learning" },
             { question: "defense in depth", hint: "Think about using multiple layers of security protection, like a medieval castle", answer: "A security strategy that employs multiple layers of defensive mechanisms to protect AI systems, ensuring that if one defense fails, others remain to protect the system", difficulty: "medium" },
             { question: "differential privacy", hint: "Consider adding controlled noise to protect individual privacy in datasets", answer: "A mathematical framework that adds calibrated noise to data or model outputs to protect individual privacy while maintaining statistical utility for analysis", difficulty: "hard" },
             { question: "evasion attack", hint: "Think about modifying inputs at test time to fool AI models", answer: "A type of adversarial attack where an attacker modifies input data at test time to cause the AI model to make incorrect predictions", difficulty: "medium" },
-            { question: "FGSM", hint: "Think about a fast method using gradients to create adversarial examples", answer: "Fast Gradient Sign Method - A simple adversarial attack algorithm that generates adversarial examples by taking a single step in the direction of the gradient to maximize loss", difficulty: "medium" },
+            { question: "FGSM", hint: "Think about a fast method using gradients to create adversarial examples", answer: "Fast Gradient Sign Method - A simple adversarial attack algorithm that generates adversarial examples by taking a single step in the direction of the gradient to maximize loss", difficulty: "medium", videoUrl: "https://www.youtube.com/embed/p_i32sJc2-A", videoTitle: "This Tiny Change BREAKS AI | FGSM Adversarial Attack Explained" },
             { question: "input sanitization", hint: "Think about cleaning and validating data before it reaches AI models", answer: "A security technique that validates and cleans input data before it reaches the AI model to prevent malicious inputs and reduce attack surface", difficulty: "easy" },
             { question: "LLM", hint: "Think about AI systems trained on vast amounts of text data", answer: "Large Language Model", difficulty: "easy" },
             { question: "model extraction", hint: "Consider stealing a model's functionality by querying it extensively", answer: "A type of attack where an attacker queries a black-box AI model to steal its functionality and create a surrogate copy without access to the original training data or parameters", difficulty: "hard" },
@@ -348,6 +348,9 @@
             document.getElementById('card-question').textContent = card.question;
             document.getElementById('card-answer').textContent = card.answer;
             document.getElementById('card-hint-text').textContent = card.hint;
+            
+            // Update video button based on card's video availability
+            updateVideoButton(card);
             
             // Set difficulty badge
             const badge = document.getElementById('difficulty-badge');
@@ -466,127 +469,146 @@
             loadCard();
         }
         
-        // Load video function
-        function loadVideo() {
-            // Create a modal to display video options
+        // Load current card's video function
+        function loadCurrentCardVideo() {
+            if (cards.length === 0) return;
+            
+            const currentCard = cards[currentCardIndex];
+            
+            // Check if current card has video
+            if (!currentCard.videoUrl) {
+                showNoVideoAlert();
+                return;
+            }
+            
+            // Create or update video modal for current card
+            createCurrentCardVideoModal(currentCard);
+        }
+        
+        function createCurrentCardVideoModal(card) {
+            // Remove existing modal if present
+            const existingModal = document.getElementById('currentCardVideoModal');
+            if (existingModal) {
+                existingModal.remove();
+            }
+            
+            // Create new modal for current card
             const videoModal = document.createElement('div');
             videoModal.className = 'modal fade';
-            videoModal.id = 'videoModal';
+            videoModal.id = 'currentCardVideoModal';
             videoModal.innerHTML = `
-                <div class="modal-dialog modal-lg">
+                <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">
-                                <i class="bi bi-play-circle me-2"></i>AI Security Course Videos
+                                <i class="bi bi-play-circle me-2"></i>Video: ${card.question.replace(/[🎯⚡🏋️🛡️🔒🎪🕳️📊🧠🔧🎨🔍💊🚫📝🤖🎭🔐🎲🎯📈🔴]/g, '').trim()}
                             </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <div class="alert alert-info">
+                                        <i class="bi bi-info-circle me-2"></i>
+                                        <strong>Current Card:</strong> ${card.question}<br>
+                                        <strong>Video:</strong> ${card.videoTitle || 'Related Video Content'}
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row">
-                                <div class="col-12 mb-3">
-                                    <h6>Available Video Resources:</h6>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h6 class="card-title">Introduction to AI Security</h6>
-                                            <p class="card-text">Overview of AI security fundamentals and key concepts.</p>
-                                            <button class="btn btn-primary btn-sm" onclick="embedVideo('intro')">
-                                                <i class="bi bi-play"></i> Load Video
-                                            </button>
-                                        </div>
+                                <div class="col-12">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe 
+                                            src="${card.videoUrl}" 
+                                            frameborder="0" 
+                                            allowfullscreen
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                                        </iframe>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-3">
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h6 class="card-title">Adversarial Attacks</h6>
-                                            <p class="card-text">Deep dive into adversarial attack methods and defenses.</p>
-                                            <button class="btn btn-primary btn-sm" onclick="embedVideo('adversarial')">
-                                                <i class="bi bi-play"></i> Load Video
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h6 class="card-title">Model Security Best Practices</h6>
-                                            <p class="card-text">Learn how to secure your AI models in production.</p>
-                                            <button class="btn btn-primary btn-sm" onclick="embedVideo('best-practices')">
-                                                <i class="bi bi-play"></i> Load Video
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h6 class="card-title">Hands-on Lab Session</h6>
-                                            <p class="card-text">Practical exercises and demonstrations.</p>
-                                            <button class="btn btn-primary btn-sm" onclick="embedVideo('lab')">
-                                                <i class="bi bi-play"></i> Load Video
-                                            </button>
+                                            <h6 class="card-title">Card Summary:</h6>
+                                            <p class="card-text"><strong>Question:</strong> ${card.question}</p>
+                                            <p class="card-text"><strong>Answer:</strong> ${card.answer}</p>
+                                            <p class="card-text"><strong>Hint:</strong> ${card.hint}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="video-container" class="mt-4" style="display: none;">
-                                <h6>Now Playing:</h6>
-                                <div class="ratio ratio-16x9">
-                                    <iframe id="video-iframe" src="" frameborder="0" allowfullscreen></iframe>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="goToNextCardFromVideo()">
+                                Next Card <i class="bi bi-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
             `;
             
-            // Add modal to body if it doesn't exist
-            if (!document.getElementById('videoModal')) {
-                document.body.appendChild(videoModal);
-            }
+            document.body.appendChild(videoModal);
             
             // Show the modal
-            const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+            const modal = new bootstrap.Modal(document.getElementById('currentCardVideoModal'));
             modal.show();
         }
         
-        // Function to embed video in the modal
-        function embedVideo(videoType) {
-            const videoContainer = document.getElementById('video-container');
-            const videoIframe = document.getElementById('video-iframe');
+        function showNoVideoAlert() {
+            const alert = document.createElement('div');
+            alert.className = 'alert alert-warning alert-dismissible fade show';
+            alert.style.position = 'fixed';
+            alert.style.top = '20px';
+            alert.style.right = '20px';
+            alert.style.zIndex = '9999';
+            alert.style.minWidth = '300px';
+            alert.innerHTML = `
+                <i class="bi bi-exclamation-triangle me-2"></i>
+                <strong>No Video Available</strong><br>
+                This card doesn't have an associated video yet.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
             
-            // Placeholder video URLs - replace with actual course videos
-            const videoUrls = {
-                'intro': 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with actual intro video
-                'adversarial': 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with actual adversarial video
-                'best-practices': 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with actual best practices video
-                'lab': 'https://www.youtube.com/embed/dQw4w9WgXcQ' // Replace with actual lab video
-            };
+            document.body.appendChild(alert);
             
-            if (videoUrls[videoType]) {
-                videoIframe.src = videoUrls[videoType];
-                videoContainer.style.display = 'block';
-                
-                // Scroll to video
-                videoContainer.scrollIntoView({ behavior: 'smooth' });
-                
-                // Show success message
-                const alert = document.createElement('div');
-                alert.className = 'alert alert-success alert-dismissible fade show mt-2';
-                alert.innerHTML = `
-                    <i class="bi bi-check-circle"></i> Video loaded successfully!
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                `;
-                videoContainer.parentNode.insertBefore(alert, videoContainer);
-                
-                // Auto-dismiss alert after 3 seconds
-                setTimeout(() => {
-                    if (alert.parentNode) {
-                        alert.remove();
-                    }
-                }, 3000);
+            // Auto-dismiss after 4 seconds
+            setTimeout(() => {
+                if (alert.parentNode) {
+                    alert.remove();
+                }
+            }, 4000);
+        }
+        
+        function goToNextCardFromVideo() {
+            // Close the modal first
+            const modal = bootstrap.Modal.getInstance(document.getElementById('currentCardVideoModal'));
+            if (modal) {
+                modal.hide();
+            }
+            
+            // Go to next card
+            nextCard();
+        }
+        
+        function updateVideoButton(card) {
+            const videoBtn = document.getElementById('load-video-btn');
+            const videoBtnText = document.getElementById('video-btn-text');
+            
+            if (card.videoUrl) {
+                videoBtn.classList.remove('btn-outline-secondary');
+                videoBtn.classList.add('btn-outline-danger');
+                videoBtn.disabled = false;
+                videoBtnText.textContent = 'Watch Video';
+                videoBtn.title = `Watch: ${card.videoTitle || 'Related video content'}`;
+            } else {
+                videoBtn.classList.remove('btn-outline-danger');
+                videoBtn.classList.add('btn-outline-secondary');
+                videoBtn.disabled = false; // Keep enabled to show "no video" message
+                videoBtnText.textContent = 'No Video';
+                videoBtn.title = 'No video available for this card';
             }
         }
         
