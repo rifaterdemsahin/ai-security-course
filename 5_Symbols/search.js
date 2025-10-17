@@ -258,21 +258,38 @@ function displayResults(data, query) {
             // Generate the appropriate href for the file
             let href = '#';
             if (result.file_path) {
+                const currentPath = window.location.pathname;
+                const isInSubdirectory = currentPath.includes('/Apply/') || currentPath.includes('/Lessons/');
+                
                 if (result.file_path.endsWith('.md')) {
-                    // For markdown files, use renderer.html with file parameter
-                    href = `renderer.html?file=${encodeURIComponent(result.file_path)}`;
+                    // For markdown files, use renderer.html
+                    const rendererPath = isInSubdirectory ? '../renderer.html' : 'renderer.html';
+                    // The file path should be relative to the project root (one level up from 5_Symbols)
+                    href = `${rendererPath}?file=${encodeURIComponent('../' + result.file_path)}`;
                 } else if (result.file_path.endsWith('.html')) {
                     // For HTML files, link directly
-                    href = result.file_path;
+                    if (isInSubdirectory) {
+                        // From subdirectory, check if target is also in a subdirectory
+                        if (result.file_path.startsWith('Lessons/') || result.file_path.startsWith('Apply/')) {
+                            href = `../${result.file_path}`;
+                        } else {
+                            href = result.file_path;
+                        }
+                    } else {
+                        // From 5_Symbols root
+                        href = result.file_path;
+                    }
                 } else {
-                    // For other files, try to link directly
-                    href = result.file_path;
+                    // For other files, use relative path
+                    href = isInSubdirectory ? `../${result.file_path}` : result.file_path;
                 }
                 
                 // If there's a line number, add it as a fragment
                 if (result.line_number) {
                     href += `#line-${result.line_number}`;
                 }
+                
+                console.log(`Generated link for ${result.file_path}: ${href}`);
             }
             
             const cardContent = `
