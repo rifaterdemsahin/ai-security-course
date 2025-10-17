@@ -159,6 +159,30 @@ a:hover {
     .file-table th:nth-child(2) { width: 70%; }
 }
 
+/* Search Results Styles */
+#search-results {
+    display: none;
+}
+
+#search-results.show {
+    display: block;
+}
+
+#search-results .list-group-item {
+    border-left: 3px solid #007bff;
+    margin-bottom: 0.5rem;
+}
+
+#search-results .list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+#search-results mark {
+    background-color: #fff3cd;
+    padding: 0.1rem 0.2rem;
+    border-radius: 2px;
+}
+
 /* Legacy styles for compatibility */
 ul {
     list-style-type: none;
