@@ -1,4 +1,5 @@
 - question : 🛡️ adversarial robustness
 - hint : Think about how well a model can resist malicious attacks
 - answer : The ability of an AI model to maintain correct predictions despite adversarial perturbations or malicious inputs
-- reference : <a href="https://www.youtube.com/watch?v=r-3rT-nI6sI" target="_blank">Adversarial Robustness Explained by AI Consultants UK</a>
+- youtubereference : <a href="https://www.youtube.com/watch?v=r-3rT-nI6sI" target="_blank">Adversarial Robustness Explained by AI Consultants UK</a>
+- googleimages : <a href="https://www.google.com/search?q=adversarial+robustness+AI+model+defense&tbm=isch" target="_blank">Adversarial Robustness Techniques and Metrics</a>

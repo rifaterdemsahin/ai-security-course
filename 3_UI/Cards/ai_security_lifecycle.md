@@ -1,4 +1,5 @@
 - question : 🔄 AI security lifecycle
 - hint : Think about the ongoing process of securing AI systems from development to deployment
 - answer : A continuous process of diagnosing threats, implementing defenses, and validating security measures to maintain AI system resilience against evolving adversarial tactics
-- reference : <a href="https://www.youtube.com/watch?v=XfuoKTQgOFY" target="_blank">AI Security Lifecycle Management</a>
+- youtubereference : <a href="https://www.youtube.com/watch?v=XfuoKTQgOFY" target="_blank">AI Security Lifecycle Management</a>
+- googleimages : <a href="https://www.google.com/search?q=AI+security+lifecycle+development+deployment&tbm=isch" target="_blank">AI Security Lifecycle Process Diagrams</a>

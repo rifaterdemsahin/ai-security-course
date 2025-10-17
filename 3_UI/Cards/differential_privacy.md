@@ -1,4 +1,5 @@
 - question : 🤫 differential privacy
 - hint : Consider adding controlled noise to protect individual privacy in datasets
 - answer : A mathematical framework that adds calibrated noise to data or model outputs to protect individual privacy while maintaining statistical utility for analysis
-- reference : <a href="https://www.youtube.com/watch?v=gI0wk1CXlsQ" target="_blank">Differential Privacy Explained</a>
+- youtubereference : <a href="https://www.youtube.com/watch?v=gI0wk1CXlsQ" target="_blank">Differential Privacy Explained</a>
+- googleimages : <a href="https://www.google.com/search?q=🤫+differential+privacy+AI+security+machine+learning&tbm=isch" target="_blank">🤫 Differential Privacy Examples and Visualizations</a>

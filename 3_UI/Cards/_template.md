@@ -5,7 +5,8 @@
 - question : [EMOJI] [TERM/CONCEPT NAME]
 - hint : [Brief hint to guide thinking about the concept]
 - answer : [Clear, concise definition or explanation of the concept]
-- reference : <a href="[URL]" target="_blank">[Link Title/Description]</a>
+- youtubereference : <a href="[URL]" target="_blank">[Link Title/Description]</a>
+- googleimages : <a href="[URL]" target="_blank">[Link Title/Description]</a>
 
 <!-- Example Usage:
 - question : 🎯 adversarial attack

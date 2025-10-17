@@ -1,4 +1,5 @@
 - question : 🤖 llm
 - hint : Think about AI systems trained on vast amounts of text data
 - answer : Large Language Model - AI models trained on massive text datasets to understand and generate human-like text, capable of various language tasks
-- reference : <a href="https://www.youtube.com/watch?v=5sLYAQS9sWQ" target="_blank">Large Language Models Explained</a>
+- youtubereference : <a href="https://www.youtube.com/watch?v=5sLYAQS9sWQ" target="_blank">Large Language Models Explained</a>
+- googleimages : <a href="https://www.google.com/search?q=llm+AI+security+machine+learning&tbm=isch" target="_blank">Llm Examples and Visualizations</a>

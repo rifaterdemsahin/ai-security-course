@@ -1,4 +1,5 @@
 - question : 🧼 input sanitization
 - hint : Think about cleaning and validating data before it reaches AI models
 - answer : A security technique that validates and cleans input data before it reaches the AI model to prevent malicious inputs and reduce attack surface
-- reference : <a href="https://www.youtube.com/watch?v=kHd23lKHwx4" target="_blank">Input Validation and Sanitization Best Practices</a>
+- youtubereference : <a href="https://www.youtube.com/watch?v=kHd23lKHwx4" target="_blank">Input Validation and Sanitization Best Practices</a>
+- googleimages : <a href="https://www.google.com/search?q=🧼+input+sanitization+AI+security+machine+learning&tbm=isch" target="_blank">🧼 Input Sanitization Examples and Visualizations</a>

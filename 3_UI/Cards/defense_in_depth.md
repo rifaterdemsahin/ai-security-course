@@ -1,4 +1,5 @@
 - question : 🏰 defense in depth
 - hint : Think about using multiple layers of security protection, like a medieval castle
 - answer : A security strategy that employs multiple layers of defensive mechanisms to protect AI systems, ensuring that if one defense fails, others remain to protect the system
-- reference : <a href="https://www.youtube.com/watch?v=vzMEv1_xMxc" target="_blank">Defense in Depth: Layered Security Strategies</a>
+- youtubereference : <a href="https://www.youtube.com/watch?v=vzMEv1_xMxc" target="_blank">Defense in Depth: Layered Security Strategies</a>
+- googleimages : <a href="https://www.google.com/search?q=🏰+defense+in+depth+AI+security+machine+learning&tbm=isch" target="_blank">🏰 Defense In Depth Examples and Visualizations</a>
