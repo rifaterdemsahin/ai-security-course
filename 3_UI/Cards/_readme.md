@@ -54,6 +54,7 @@ Each card follows a consistent format:
 - **Answer**: Clear, concise explanation of the concept
 - **YouTube Reference**: Video content for deeper understanding
 - **Google Images**: Visual examples and illustrations
+- **Reading Reference**: Research papers and academic articles
 
 ## Available Topics
 
