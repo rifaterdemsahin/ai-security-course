@@ -2,7 +2,7 @@
 
 ## Module Overview
 
-**Duration:** Approximately 60 minutes  
+**Duration:** Approximately 21 minutes  
 **Aligned Learning Objective:** LO2
 
 Moving from offense to defense, this module focuses on building security directly into your AI systems. You will learn to implement and configure robust, proactive defense mechanisms like adversarial training, input sanitization, and differential privacy to create models that are resilient by design.

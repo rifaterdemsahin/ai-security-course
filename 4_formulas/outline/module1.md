@@ -2,7 +2,7 @@
 
 ## Module Overview
 
-**Duration:** Approximately 60 minutes  
+**Duration:** Approximately 21 minutes  
 **Aligned Learning Objective:** LO1
 
 This module introduces the fundamental concept that AI models are attack surfaces. Learners will learn to think like an adversary, exploring the primary categories of attacks—evasion, data poisoning, and model extraction—and see how they exploit model weaknesses with real-world examples.

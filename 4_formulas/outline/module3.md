@@ -2,7 +2,7 @@
 
 ## Module Overview
 
-**Duration:** Approximately 60 minutes  
+**Duration:** Approximately 21 minutes  
 **Aligned Learning Objective:** LO3
 
 A defense is only effective if it's tested. In this final module, you will master the art of AI "Red Teaming" by designing and executing simulated attacks to validate your security measures. You will learn to evaluate model resilience and embrace the continuous security lifecycle required to stay ahead of emerging threats.

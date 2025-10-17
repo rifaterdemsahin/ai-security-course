@@ -12,7 +12,7 @@ const PageConfig = {
                 subtitle: "Understanding AI Vulnerabilities",
                 icon: "bi-shield-exclamation",
                 bgColor: "bg-primary",
-                duration: "60 minutes",
+                duration: "21 minutes",
                 objective: "LO1"
             },
             basePath: "../../"
@@ -24,7 +24,7 @@ const PageConfig = {
                 subtitle: "Proactive Defense Strategies",
                 icon: "bi-shield-check",
                 bgColor: "bg-success",
-                duration: "60 minutes",
+                duration: "21 minutes",
                 objective: "LO2"
             },
             basePath: "../../"
@@ -36,7 +36,7 @@ const PageConfig = {
                 subtitle: "and the Continuous Security Cycle", 
                 icon: "bi-bug",
                 bgColor: "bg-danger",
-                duration: "60 minutes",
+                duration: "21 minutes",
                 objective: "LO3"
             },
             basePath: "../../"
