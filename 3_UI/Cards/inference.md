@@ -1,0 +1,5 @@
+- question : 🔍 inference attack
+- hint : Think about learning private information from the model's training data
+- answer : Attacks that learn information on private data. For instance, an attack can derive properties of the model's training data up to identifying single data entries.
+- youtubereference : <a href="https://www.youtube.com/results?search_query=inference+attack+AI+security+privacy" target="_blank">Inference Attack AI Security Videos</a>
+- googleimages : <a href="https://www.google.com/search?q=inference+attack+AI+security+privacy+examples&tbm=isch" target="_blank">Inference Attack Examples and Visualizations</a>

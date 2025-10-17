@@ -1,0 +1,5 @@
+- question : 🎯 extraction attack
+- hint : Think about stealing proprietary model information through repeated queries
+- answer : Attacks that steal a proprietary model. For instance, attacks can query a model regularly to extract valuable information.
+- youtubereference : <a href="https://www.youtube.com/results?search_query=model+extraction+attack+AI+security" target="_blank">Model Extraction Attack AI Security Videos</a>
+- googleimages : <a href="https://www.google.com/search?q=model+extraction+attack+AI+security+examples&tbm=isch" target="_blank">Model Extraction Attack Examples and Visualizations</a>
