@@ -211,22 +211,49 @@ function displayResults(data, query) {
         `;
 
         allResults.forEach((result, index) => {
-            resultsHTML += `
-                <div class="col-md-6 col-lg-4 mb-3">
-                    <div class="card h-100 border-${result.color}">
-                        <div class="card-header bg-${result.color} text-white">
-                            <div class="d-flex align-items-center">
-                                <i class="${result.icon} me-2"></i>
-                                <small class="fw-bold">${result.type}</small>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="card-title">${highlightQuery(escapeHtml(result.title), query)}</h6>
-                            <p class="card-text small">${highlightQuery(escapeHtml(result.description), query)}</p>
-                            ${result.details ? `<div class="text-muted small">${escapeHtml(result.details)}</div>` : ''}
-                            ${result.file_path ? `<div class="mt-2"><small class="text-muted"><i class="bi bi-folder me-1"></i>${escapeHtml(result.file_path)}</small></div>` : ''}
+            // Generate the appropriate href for the file
+            let href = '#';
+            if (result.file_path) {
+                if (result.file_path.endsWith('.md')) {
+                    // For markdown files, use renderer.html with file parameter
+                    href = `renderer.html?file=${encodeURIComponent(result.file_path)}`;
+                } else if (result.file_path.endsWith('.html')) {
+                    // For HTML files, link directly
+                    href = result.file_path;
+                } else {
+                    // For other files, try to link directly
+                    href = result.file_path;
+                }
+                
+                // If there's a line number, add it as a fragment
+                if (result.line_number) {
+                    href += `#line-${result.line_number}`;
+                }
+            }
+            
+            const cardContent = `
+                <div class="card h-100 border-${result.color}">
+                    <div class="card-header bg-${result.color} text-white">
+                        <div class="d-flex align-items-center">
+                            <i class="${result.icon} me-2"></i>
+                            <small class="fw-bold">${result.type}</small>
                         </div>
                     </div>
+                    <div class="card-body">
+                        <h6 class="card-title">${highlightQuery(escapeHtml(result.title), query)}</h6>
+                        <p class="card-text small">${highlightQuery(escapeHtml(result.description), query)}</p>
+                        ${result.details ? `<div class="text-muted small">${escapeHtml(result.details)}</div>` : ''}
+                        ${result.file_path ? `<div class="mt-2"><small class="text-muted"><i class="bi bi-folder me-1"></i>${escapeHtml(result.file_path)}</small></div>` : ''}
+                    </div>
+                </div>
+            `;
+            
+            resultsHTML += `
+                <div class="col-md-6 col-lg-4 mb-3">
+                    ${result.file_path ? 
+                        `<a href="${href}" class="text-decoration-none" style="color: inherit;">${cardContent}</a>` : 
+                        cardContent
+                    }
                 </div>
             `;
         });
