@@ -150,6 +150,30 @@
       "definition": "Systematic adversarial testing to identify security vulnerabilities in AI systems.",
       "emoji": "🔴",
       "card_file": "3_UI/Cards/red_teaming.md"
+    },
+    {
+      "term": "Perturbation Budget",
+      "definition": "The maximum allowed magnitude of adversarial perturbations.",
+      "emoji": "📏",
+      "card_file": "3_UI/Cards/perturbation_budget.md"
+    },
+    {
+      "term": "AI Security Lifecycle",
+      "definition": "Comprehensive security framework for AI system development and deployment.",
+      "emoji": "🔄",
+      "card_file": "3_UI/Cards/ai_security_lifecycle.md"
+    },
+    {
+      "term": "ART Toolbox",
+      "definition": "Adversarial Robustness Toolbox for machine learning security research.",
+      "emoji": "🧰",
+      "card_file": "3_UI/Cards/art_toolbox.md"
+    },
+    {
+      "term": "Large Language Model Security",
+      "definition": "Security considerations and vulnerabilities specific to large language models.",
+      "emoji": "🤖",
+      "card_file": "3_UI/Cards/llm.md"
     }
   ],
   "learning_objectives": [
