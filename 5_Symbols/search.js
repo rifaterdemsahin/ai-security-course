@@ -44,15 +44,14 @@ function initializeSearch() {
         const currentPath = window.location.pathname;
         let searchJsonPath = 'search.json';
         
-        if (currentPath.includes('/ai-security-course/')) {
-            // We're on GitHub Pages
-            if (currentPath.includes('5_Symbols/')) {
-                searchJsonPath = './search.json';
-            } else {
-                searchJsonPath = '/ai-security-course/5_Symbols/search.json';
-            }
+        console.log('Current path for search:', currentPath);
+        console.log('Current hostname:', window.location.hostname);
+        
+        if (window.location.hostname.includes('github.io') || currentPath.includes('/ai-security-course/')) {
+            // We're on GitHub Pages - always use absolute path to avoid issues
+            searchJsonPath = '/ai-security-course/5_Symbols/search.json';
         } else if (currentPath.includes('/5_Symbols/')) {
-            // We're in 5_Symbols directory structure
+            // We're in local development in 5_Symbols directory structure
             if (currentPath.includes('Lessons/')) {
                 searchJsonPath = '../../search.json';
             } else if (currentPath.includes('Apply/')) {
@@ -61,7 +60,7 @@ function initializeSearch() {
                 searchJsonPath = './search.json';
             }
         } else {
-            // We're at root level
+            // We're at root level (local development)
             searchJsonPath = '5_Symbols/search.json';
         }
 
@@ -353,33 +352,54 @@ function clearSearch() {
 function testSearchJson() {
     // Test function to help debug search.json access
     const currentPath = window.location.pathname;
-    const possiblePaths = [
-        'search.json',
-        './search.json',
-        '/ai-security-course/5_Symbols/search.json',
-        '5_Symbols/search.json',
-        '../../search.json',
-        '../search.json'
-    ];
+    const hostname = window.location.hostname;
+    
+    let possiblePaths = [];
+    
+    if (hostname.includes('github.io')) {
+        // GitHub Pages specific paths
+        possiblePaths = [
+            '/ai-security-course/5_Symbols/search.json',
+            '../search.json',
+            '../../search.json',
+            './search.json',
+            'search.json'
+        ];
+    } else {
+        // Local development paths
+        possiblePaths = [
+            'search.json',
+            './search.json',
+            '../search.json',
+            '../../search.json',
+            '5_Symbols/search.json'
+        ];
+    }
     
     console.log('Current path:', currentPath);
+    console.log('Hostname:', hostname);
     console.log('Testing search.json access...');
     
-    possiblePaths.forEach(path => {
-        fetch(path)
-            .then(response => {
-                console.log(`✅ ${path}: Status ${response.status}`);
-                if (response.ok) {
-                    return response.json();
-                }
-                throw new Error(`Status ${response.status}`);
-            })
-            .then(data => {
-                console.log(`✅ ${path}: Valid JSON with ${Object.keys(data).length} properties`);
-            })
-            .catch(error => {
-                console.log(`❌ ${path}: ${error.message}`);
-            });
+    possiblePaths.forEach((path, index) => {
+        setTimeout(() => {
+            fetch(path)
+                .then(response => {
+                    console.log(`✅ ${path}: Status ${response.status}`);
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error(`Status ${response.status}`);
+                })
+                .then(data => {
+                    console.log(`✅ ${path}: Valid JSON with ${Object.keys(data).length} properties`);
+                    if (Object.keys(data).length > 0) {
+                        console.log(`🎯 WORKING PATH: ${path}`);
+                    }
+                })
+                .catch(error => {
+                    console.log(`❌ ${path}: ${error.message}`);
+                });
+        }, index * 100); // Stagger requests to avoid overwhelming
     });
 }
 
