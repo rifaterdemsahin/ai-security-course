@@ -1,0 +1,14 @@
+{
+    "output": [
+        {
+            "file_path": "4_formulas/outline/module1.md",
+            "line_number": 5,
+            "line": "**Duration:** Approximately 21 minutes"
+        },
+        {
+            "file_path": "5_Symbols/Lessons/Lesson 1/index.html",
+            "line_number": 30,
+            "line": "<div data-lesson-header='{\"title\":\"Lesson 1: The Attacker's Playbook\",\"subtitle\":\"Understanding AI Vulnerabilities\",\"icon\":\"bi-shield-exclamation\",\"bgColor\":\"bg-primary\",\"duration\":\"21 minutes\",\"objective\":\"LO1\"}'></div>"
+        }
+    ]
+}
