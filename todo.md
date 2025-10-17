@@ -1,0 +1,2 @@
+- do the testing to real add codes to do the lessons
+- show case them iin the lesson.
