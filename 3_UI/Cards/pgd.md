@@ -2,4 +2,4 @@
 - hint : Think about an iterative attack method that takes multiple gradient steps
 - answer : Projected Gradient Descent - A more sophisticated iterative adversarial attack method that takes multiple steps to find stronger adversarial examples within a specified perturbation budget
 - youtubereference : <a href="https://www.youtube.com/watch?v=iaSR6lGE8Os" target="_blank">PGD: Projected Gradient Descent Attack Explained</a>
-- googleimages : <a href="https://www.google.com/search?q=🚶+pgd+AI+security+machine+learning&tbm=isch" target="_blank">🚶 Pgd Examples and Visualizations</a>
+- googleimages : <a href="https://www.google.com/search?q=PGD+projected+gradient+descent+adversarial+attack&tbm=isch" target="_blank">PGD Algorithm Examples and Visualizations</a>
