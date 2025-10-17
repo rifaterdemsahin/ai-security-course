@@ -6,6 +6,20 @@
       "keywords": ["attack", "vulnerability", "adversarial"],
       "duration": "21 minutes",
       "objective": "LO1"
+    },
+    {
+      "title": "Module 2: Defense Strategies",
+      "description": "Building Robust AI Systems",
+      "keywords": ["defense", "robustness", "security"],
+      "duration": "25 minutes",
+      "objective": "LO2"
+    },
+    {
+      "title": "Module 3: Advanced Security",
+      "description": "Enterprise AI Security Implementation",
+      "keywords": ["enterprise", "implementation", "best practices"],
+      "duration": "30 minutes",
+      "objective": "LO3"
     }
   ],
   "lessons": [
@@ -15,7 +29,23 @@
       "concepts": ["evasion", "data poisoning", "model extraction"],
       "duration": "21 minutes",
       "objective": "LO1",
-      "file_path": "5_Symbols/Lessons/Lesson 1/index.html"
+      "file_path": "Lessons/Lesson 1/index.html"
+    },
+    {
+      "title": "Lesson 2: Defense Mechanisms",
+      "subtitle": "Protecting AI Models",
+      "concepts": ["adversarial training", "input validation", "model hardening"],
+      "duration": "25 minutes",
+      "objective": "LO2",
+      "file_path": "Lessons/Lesson 2/index.html"
+    },
+    {
+      "title": "Lesson 3: Security Implementation",
+      "subtitle": "Deploying Secure AI",
+      "concepts": ["security lifecycle", "monitoring", "incident response"],
+      "duration": "30 minutes",
+      "objective": "LO3",
+      "file_path": "Lessons/Lesson 3/index.html"
     }
   ],
   "technical_terms": [
@@ -23,13 +53,117 @@
       "term": "Adversarial Attack",
       "definition": "A technique used to fool a machine learning model with malicious input.",
       "emoji": "🎯",
-      "card_file": "3_UI/Cards/adversarial_attack.md"
+      "card_file": "../3_UI/Cards/adversarial_attack.md"
+    },
+    {
+      "term": "Adversarial Patch",
+      "definition": "A physical patch that can cause misclassification when placed in the real world.",
+      "emoji": "🏷️",
+      "card_file": "../3_UI/Cards/adversarial_patch.md"
+    },
+    {
+      "term": "Adversarial Robustness",
+      "definition": "The ability of an AI model to maintain correct predictions under adversarial perturbations.",
+      "emoji": "🛡️",
+      "card_file": "../3_UI/Cards/adversarial_robustness.md"
+    },
+    {
+      "term": "Adversarial Training",
+      "definition": "A defense technique that trains models on adversarial examples to improve robustness.",
+      "emoji": "💪",
+      "card_file": "../3_UI/Cards/adversarial_training.md"
+    },
+    {
+      "term": "Backdoor Attack",
+      "definition": "An attack that embeds hidden triggers in AI models during training.",
+      "emoji": "🚪",
+      "card_file": "../3_UI/Cards/backdoor_attack.md"
+    },
+    {
+      "term": "Black Box Attack",
+      "definition": "An attack performed without knowledge of the model's internal structure.",
+      "emoji": "⚫",
+      "card_file": "../3_UI/Cards/black_box_attack.md"
+    },
+    {
+      "term": "Data Poisoning",
+      "definition": "Corrupting training data to compromise model behavior.",
+      "emoji": "☠️",
+      "card_file": "../3_UI/Cards/data_poisoning.md"
+    },
+    {
+      "term": "Defense in Depth",
+      "definition": "A layered security approach with multiple defensive mechanisms.",
+      "emoji": "🏰",
+      "card_file": "../3_UI/Cards/defense_in_depth.md"
+    },
+    {
+      "term": "Differential Privacy",
+      "definition": "A privacy-preserving technique that adds noise to protect individual data points.",
+      "emoji": "🔒",
+      "card_file": "../3_UI/Cards/differential_privacy.md"
+    },
+    {
+      "term": "Evasion Attack",
+      "definition": "Modifying input data to cause misclassification by a trained model.",
+      "emoji": "🏃",
+      "card_file": "../3_UI/Cards/evasion_attack.md"
+    },
+    {
+      "term": "FGSM",
+      "definition": "Fast Gradient Sign Method - a technique for generating adversarial examples.",
+      "emoji": "⚡",
+      "card_file": "../3_UI/Cards/fgsm.md"
+    },
+    {
+      "term": "Input Sanitization",
+      "definition": "Cleaning and validating input data before processing by AI models.",
+      "emoji": "🧼",
+      "card_file": "../3_UI/Cards/input_sanitization.md"
+    },
+    {
+      "term": "Model Extraction",
+      "definition": "Stealing a machine learning model by querying it and recreating its functionality.",
+      "emoji": "🔓",
+      "card_file": "../3_UI/Cards/model_extraction.md"
+    },
+    {
+      "term": "Model Hardening",
+      "definition": "Strengthening AI models against various types of attacks.",
+      "emoji": "🔨",
+      "card_file": "../3_UI/Cards/model_hardening.md"
+    },
+    {
+      "term": "Model Stealing",
+      "definition": "Extracting proprietary model information through systematic querying.",
+      "emoji": "🕵️",
+      "card_file": "../3_UI/Cards/model_stealing.md"
+    },
+    {
+      "term": "PGD",
+      "definition": "Projected Gradient Descent - an iterative method for generating strong adversarial examples.",
+      "emoji": "🎯",
+      "card_file": "../3_UI/Cards/pgd.md"
+    },
+    {
+      "term": "Red Teaming",
+      "definition": "Systematic adversarial testing to identify security vulnerabilities in AI systems.",
+      "emoji": "🔴",
+      "card_file": "../3_UI/Cards/red_teaming.md"
     }
   ],
   "learning_objectives": [
     {
       "id": "LO1",
       "description": "Analyze and identify security vulnerabilities in AI models."
+    },
+    {
+      "id": "LO2",
+      "description": "Implement defense mechanisms to protect AI systems."
+    },
+    {
+      "id": "LO3",
+      "description": "Deploy secure AI systems in production environments."
     }
   ],
   "content_files": [
@@ -37,7 +171,25 @@
       "title": "README.md",
       "type": "Documentation",
       "keywords": ["project", "setup", "guide"],
-      "file_path": "README.md"
+      "file_path": "../README.md"
+    },
+    {
+      "title": "Project OKRs",
+      "type": "Planning",
+      "keywords": ["objectives", "goals", "planning"],
+      "file_path": "../1_real/okrs.md"
+    },
+    {
+      "title": "Environment Setup",
+      "type": "Configuration",
+      "keywords": ["setup", "environment", "configuration"],
+      "file_path": "../2_Environment/README.md"
+    },
+    {
+      "title": "Course Outline",
+      "type": "Curriculum",
+      "keywords": ["outline", "curriculum", "structure"],
+      "file_path": "../4_formulas/outline/_outline.md"
     }
   ],
   "hands_on_labs": [
@@ -47,12 +199,31 @@
       "duration": "15 minutes",
       "module": "Module 1",
       "objective": "LO1"
+    },
+    {
+      "title": "Defense Implementation Lab",
+      "description": "Implement adversarial training and input validation techniques.",
+      "duration": "20 minutes",
+      "module": "Module 2",
+      "objective": "LO2"
+    },
+    {
+      "title": "Security Assessment Lab",
+      "description": "Conduct comprehensive security testing of AI systems.",
+      "duration": "25 minutes",
+      "module": "Module 3",
+      "objective": "LO3"
     }
   ],
   "key_concepts": [
     "Adversarial Robustness",
     "Differential Privacy",
-    "Red Teaming"
+    "Red Teaming",
+    "Model Security",
+    "Attack Detection",
+    "Input Validation",
+    "Security Lifecycle",
+    "Threat Modeling"
   ],
   "search_index": [
     {
