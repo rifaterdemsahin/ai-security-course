@@ -1,14 +1,277 @@
 {
-    "output": [
+    "courses": [
+        {
+            "title": "Secure AI: Interpret and Protect Models",
+            "description": "A comprehensive course on AI security covering vulnerabilities, defenses, and testing methodologies",
+            "duration": "70 minutes",
+            "level": "Intermediate",
+            "instructor": "Rifat Erdem Sahin"
+        }
+    ],
+    "modules": [
+        {
+            "id": "module1",
+            "title": "The Attacker's Playbook - Understanding AI Vulnerabilities",
+            "description": "Learn to analyze and identify security vulnerabilities in AI models including evasion, data poisoning, and model extraction attacks",
+            "duration": "71.5 minutes",
+            "objective": "LO1",
+            "keywords": ["evasion attacks", "data poisoning", "model extraction", "adversarial examples", "vulnerabilities"]
+        },
+        {
+            "id": "module2", 
+            "title": "Building the Shield - Proactive Defense Strategies",
+            "description": "Apply defense mechanisms like adversarial training and differential privacy to protect AI systems",
+            "duration": "61.5 minutes",
+            "objective": "LO2",
+            "keywords": ["adversarial training", "input sanitization", "differential privacy", "defense mechanisms", "proactive security"]
+        },
+        {
+            "id": "module3",
+            "title": "The AI Security Lifecycle - Testing and Validation", 
+            "description": "Evaluate security measures by designing and executing simulated adversarial attacks",
+            "duration": "TBD",
+            "objective": "LO3",
+            "keywords": ["red teaming", "adversarial testing", "security validation", "continuous testing", "security lifecycle"]
+        }
+    ],
+    "learning_objectives": [
+        {
+            "id": "LO1",
+            "description": "Analyze and identify a range of security vulnerabilities in complex AI models, including evasion, data poisoning, and model extraction attacks"
+        },
+        {
+            "id": "LO2", 
+            "description": "Apply defense mechanisms like adversarial training and differential privacy to protect AI systems from known threats"
+        },
+        {
+            "id": "LO3",
+            "description": "Evaluate the effectiveness of security measures by designing and executing simulated adversarial attacks to test the resilience of defended AI model"
+        }
+    ],
+    "lessons": [
+        {
+            "id": "lesson1",
+            "title": "Lesson 1: The Attacker's Playbook",
+            "subtitle": "Understanding AI Vulnerabilities",
+            "duration": "21 minutes",
+            "objective": "LO1",
+            "file_path": "5_Symbols/Lessons/Lesson 1/index.html",
+            "concepts": ["evasion attacks", "data poisoning", "model extraction", "adversarial mindset", "security vulnerabilities"]
+        },
+        {
+            "id": "lesson2",
+            "title": "Lesson 2: Building the Shield", 
+            "subtitle": "Proactive Defense Strategies",
+            "duration": "TBD",
+            "objective": "LO2",
+            "file_path": "5_Symbols/Lessons/Lesson 2/index.html",
+            "concepts": ["adversarial training", "input sanitization", "differential privacy", "defense mechanisms"]
+        },
+        {
+            "id": "lesson3",
+            "title": "Lesson 3: The AI Security Lifecycle",
+            "subtitle": "Testing and Validation", 
+            "duration": "TBD",
+            "objective": "LO3",
+            "file_path": "5_Symbols/Lessons/Lesson 3/index.html",
+            "concepts": ["adversarial testing", "red teaming", "security validation", "continuous testing"]
+        }
+    ],
+    "technical_terms": [
+        {
+            "term": "adversarial attack",
+            "definition": "A malicious input designed to fool AI models by adding imperceptible perturbations that cause misclassification while appearing normal to humans",
+            "emoji": "🎯",
+            "card_file": "3_UI/Cards/adversarial_attack.md"
+        },
+        {
+            "term": "data poisoning", 
+            "definition": "An attack where malicious data is injected into the training dataset to compromise the AI model's behavior, creating hidden backdoors that activate on specific triggers",
+            "emoji": "🧪",
+            "card_file": "3_UI/Cards/data_poisoning.md"
+        },
+        {
+            "term": "differential privacy",
+            "definition": "A mathematical framework that adds calibrated noise to data or model outputs to protect individual privacy while maintaining statistical utility for analysis", 
+            "emoji": "🤫",
+            "card_file": "3_UI/Cards/differential_privacy.md"
+        },
+        {
+            "term": "adversarial training",
+            "definition": "A defense technique that trains AI models on adversarial examples to improve robustness against attacks",
+            "card_file": "3_UI/Cards/adversarial_training.md"
+        },
+        {
+            "term": "evasion attack", 
+            "definition": "Attacks that occur at test time by modifying inputs to cause misclassification",
+            "card_file": "3_UI/Cards/evasion_attack.md"
+        },
+        {
+            "term": "model extraction",
+            "definition": "An attack where adversaries steal the functionality of a machine learning model through strategic queries",
+            "card_file": "3_UI/Cards/model_extraction.md"
+        },
+        {
+            "term": "FGSM",
+            "definition": "Fast Gradient Sign Method - a popular technique for generating adversarial examples",
+            "card_file": "3_UI/Cards/fgsm.md"
+        },
+        {
+            "term": "PGD", 
+            "definition": "Projected Gradient Descent - an iterative adversarial attack method",
+            "card_file": "3_UI/Cards/pgd.md"
+        },
+        {
+            "term": "input sanitization",
+            "definition": "Preprocessing techniques to detect and neutralize malicious inputs before they reach the model",
+            "card_file": "3_UI/Cards/input_sanitization.md"
+        },
+        {
+            "term": "adversarial robustness",
+            "definition": "A model's ability to maintain correct predictions when faced with adversarial inputs",
+            "card_file": "3_UI/Cards/adversarial_robustness.md"
+        },
+        {
+            "term": "backdoor attack",
+            "definition": "An attack where a model behaves normally except when specific trigger patterns are present",
+            "card_file": "3_UI/Cards/backdoor_attack.md"
+        },
+        {
+            "term": "red teaming",
+            "definition": "Systematic testing of AI systems by simulating adversarial attacks to identify vulnerabilities", 
+            "card_file": "3_UI/Cards/red_teaming.md"
+        },
+        {
+            "term": "AI security lifecycle",
+            "definition": "The continuous process of securing AI systems throughout their development, deployment, and maintenance",
+            "card_file": "3_UI/Cards/ai_security_lifecycle.md"
+        }
+    ],
+    "content_files": [
+        {
+            "file_path": "gemini.md",
+            "title": "Secure AI: Interpret and Protect Models",
+            "type": "course_overview",
+            "keywords": ["course description", "overview"]
+        },
+        {
+            "file_path": "4_formulas/outline/_outline.md", 
+            "title": "Course Outline Template",
+            "type": "course_structure",
+            "keywords": ["course outline", "structure", "modules", "learning objectives"]
+        },
+        {
+            "file_path": "4_formulas/outline/outline_summary.md",
+            "title": "Course Outline Summary", 
+            "type": "course_summary",
+            "keywords": ["summary", "prerequisites", "skills", "assessment"]
+        },
+        {
+            "file_path": "4_formulas/course_length_estimation.md",
+            "title": "Course Length Estimation",
+            "type": "planning",
+            "keywords": ["duration", "timing", "module breakdown"]
+        },
+        {
+            "file_path": "4_formulas/script/whole_Script.md",
+            "title": "Complete Course Script",
+            "type": "content_script", 
+            "keywords": ["script", "video content", "narration"]
+        },
+        {
+            "file_path": "4_formulas/outline/module1.md",
+            "title": "Module 1: The Attacker's Playbook",
+            "type": "module_outline",
+            "keywords": ["module 1", "vulnerabilities", "evasion", "data poisoning", "model extraction"]
+        },
+        {
+            "file_path": "4_formulas/outline/module2.md", 
+            "title": "Module 2: Building the Shield",
+            "type": "module_outline",
+            "keywords": ["module 2", "defenses", "adversarial training", "differential privacy", "input sanitization"]
+        },
+        {
+            "file_path": "cards/technical_terms.md",
+            "title": "Technical Terms List",
+            "type": "reference",
+            "keywords": ["terms", "definitions", "glossary", "vocabulary"]
+        }
+    ],
+    "hands_on_labs": [
+        {
+            "title": "Evading an AI Security Camera",
+            "module": "module1", 
+            "duration": "20 minutes",
+            "objective": "LO1",
+            "description": "Practice generating adversarial examples to evade AI detection systems"
+        },
+        {
+            "title": "Building a Resilient AI with Adversarial Training",
+            "module": "module2",
+            "duration": "20 minutes", 
+            "objective": "LO2",
+            "description": "Implement adversarial training to improve model robustness"
+        }
+    ],
+    "key_concepts": [
+        "AI Security Vulnerabilities",
+        "Adversarial Examples", 
+        "Evasion Attacks",
+        "Data Poisoning",
+        "Model Extraction",
+        "Adversarial Training",
+        "Input Sanitization", 
+        "Differential Privacy",
+        "Defense in Depth",
+        "Red Teaming",
+        "Security Testing",
+        "AI Security Lifecycle",
+        "Robustness Evaluation",
+        "Attack Simulation",
+        "Security Metrics"
+    ],
+    "search_index": [
         {
             "file_path": "4_formulas/outline/module1.md",
             "line_number": 5,
-            "line": "**Duration:** Approximately 21 minutes"
+            "content": "**Duration:** Approximately 21 minutes",
+            "keywords": ["duration", "module1", "timing"]
         },
         {
-            "file_path": "5_Symbols/Lessons/Lesson 1/index.html",
-            "line_number": 30,
-            "line": "<div data-lesson-header='{\"title\":\"Lesson 1: The Attacker's Playbook\",\"subtitle\":\"Understanding AI Vulnerabilities\",\"icon\":\"bi-shield-exclamation\",\"bgColor\":\"bg-primary\",\"duration\":\"21 minutes\",\"objective\":\"LO1\"}'></div>"
+            "file_path": "5_Symbols/Lessons/Lesson 1/index.html", 
+            "line_number": 44,
+            "content": "Lesson 1: The Attacker's Playbook - Understanding AI Vulnerabilities",
+            "keywords": ["lesson 1", "attackers", "vulnerabilities", "AI security"]
+        },
+        {
+            "file_path": "4_formulas/outline/outline_summary.md",
+            "line_number": 3,
+            "content": "Secure AI: Interpret and Protect Models",
+            "keywords": ["course title", "AI security", "models"]
+        },
+        {
+            "file_path": "4_formulas/outline/_outline.md",
+            "line_number": 18,
+            "content": "LO1: Analyze and identify a range of security vulnerabilities in complex AI models",
+            "keywords": ["learning objective", "vulnerabilities", "analysis", "AI models"]
+        },
+        {
+            "file_path": "4_formulas/outline/_outline.md", 
+            "line_number": 20,
+            "content": "LO2: Apply defense mechanisms like adversarial training and differential privacy",
+            "keywords": ["learning objective", "defense", "adversarial training", "differential privacy"]
+        },
+        {
+            "file_path": "4_formulas/outline/_outline.md",
+            "line_number": 22, 
+            "content": "LO3: Evaluate the effectiveness of security measures by designing and executing simulated adversarial attacks",
+            "keywords": ["learning objective", "evaluation", "testing", "adversarial attacks", "simulation"]
+        },
+        {
+            "file_path": "cards/technical_terms.md",
+            "line_number": 3,
+            "content": "Adversarial AI landscape, Adversarial Examples, AI Security",
+            "keywords": ["technical terms", "adversarial", "AI security", "examples"]
         }
     ]
 }
