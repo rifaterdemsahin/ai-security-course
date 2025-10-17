@@ -271,6 +271,9 @@
                     <button class="btn btn-outline-primary btn-card-action" onclick="toggleStudyMode()">
                         <i class="bi bi-book"></i> <span id="study-mode-text">Study Mode</span>
                     </button>
+                    <button class="btn btn-outline-danger btn-card-action" onclick="loadVideo()">
+                        <i class="bi bi-play-circle"></i> Load the Video
+                    </button>
                 </div>
                 
                 <!-- Study Mode Info -->
@@ -461,6 +464,130 @@
             
             // Reset button states
             loadCard();
+        }
+        
+        // Load video function
+        function loadVideo() {
+            // Create a modal to display video options
+            const videoModal = document.createElement('div');
+            videoModal.className = 'modal fade';
+            videoModal.id = 'videoModal';
+            videoModal.innerHTML = `
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">
+                                <i class="bi bi-play-circle me-2"></i>AI Security Course Videos
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <h6>Available Video Resources:</h6>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Introduction to AI Security</h6>
+                                            <p class="card-text">Overview of AI security fundamentals and key concepts.</p>
+                                            <button class="btn btn-primary btn-sm" onclick="embedVideo('intro')">
+                                                <i class="bi bi-play"></i> Load Video
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Adversarial Attacks</h6>
+                                            <p class="card-text">Deep dive into adversarial attack methods and defenses.</p>
+                                            <button class="btn btn-primary btn-sm" onclick="embedVideo('adversarial')">
+                                                <i class="bi bi-play"></i> Load Video
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Model Security Best Practices</h6>
+                                            <p class="card-text">Learn how to secure your AI models in production.</p>
+                                            <button class="btn btn-primary btn-sm" onclick="embedVideo('best-practices')">
+                                                <i class="bi bi-play"></i> Load Video
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Hands-on Lab Session</h6>
+                                            <p class="card-text">Practical exercises and demonstrations.</p>
+                                            <button class="btn btn-primary btn-sm" onclick="embedVideo('lab')">
+                                                <i class="bi bi-play"></i> Load Video
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="video-container" class="mt-4" style="display: none;">
+                                <h6>Now Playing:</h6>
+                                <div class="ratio ratio-16x9">
+                                    <iframe id="video-iframe" src="" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Add modal to body if it doesn't exist
+            if (!document.getElementById('videoModal')) {
+                document.body.appendChild(videoModal);
+            }
+            
+            // Show the modal
+            const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+            modal.show();
+        }
+        
+        // Function to embed video in the modal
+        function embedVideo(videoType) {
+            const videoContainer = document.getElementById('video-container');
+            const videoIframe = document.getElementById('video-iframe');
+            
+            // Placeholder video URLs - replace with actual course videos
+            const videoUrls = {
+                'intro': 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with actual intro video
+                'adversarial': 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with actual adversarial video
+                'best-practices': 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with actual best practices video
+                'lab': 'https://www.youtube.com/embed/dQw4w9WgXcQ' // Replace with actual lab video
+            };
+            
+            if (videoUrls[videoType]) {
+                videoIframe.src = videoUrls[videoType];
+                videoContainer.style.display = 'block';
+                
+                // Scroll to video
+                videoContainer.scrollIntoView({ behavior: 'smooth' });
+                
+                // Show success message
+                const alert = document.createElement('div');
+                alert.className = 'alert alert-success alert-dismissible fade show mt-2';
+                alert.innerHTML = `
+                    <i class="bi bi-check-circle"></i> Video loaded successfully!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                `;
+                videoContainer.parentNode.insertBefore(alert, videoContainer);
+                
+                // Auto-dismiss alert after 3 seconds
+                setTimeout(() => {
+                    if (alert.parentNode) {
+                        alert.remove();
+                    }
+                }, 3000);
+            }
         }
         
         // Keyboard navigation
