@@ -3,4 +3,4 @@
 - answer : A mathematical framework that adds calibrated noise to data or model outputs to protect individual privacy while maintaining statistical utility for analysis
 - youtubereference : <a href="https://www.youtube.com/watch?v=gI0wk1CXlsQ" target="_blank">Differential Privacy Explained</a>
 - googleimages : <a href="https://www.google.com/search?q=🤫+differential+privacy+AI+security+machine+learning&tbm=isch" target="_blank">🤫 Differential Privacy Examples and Visualizations</a>
-- readingreference : <a href="https://www.google.com/search?q=differential privacy+AI+security+research+papers" target="_blank">differential privacy Research Papers and Articles</a>
+- readingreferences : <a href="https://www.google.com/search?q=differential privacy+AI+security+research+papers" target="_blank">differential privacy Research Papers and Articles</a>

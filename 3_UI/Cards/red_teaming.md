@@ -3,4 +3,4 @@
 - answer : A systematic security testing methodology where a team simulates adversarial attacks to identify vulnerabilities and test the effectiveness of defensive measures in AI systems
 - youtubereference : <a href="https://www.youtube.com/watch?v=vV4KJQ2rOe4" target="_blank">AI Red Teaming: Testing AI Security</a>
 - googleimages : <a href="https://www.google.com/search?q=red+teaming+AI+security+testing+methodology&tbm=isch" target="_blank">AI Red Teaming Process and Examples</a>
-- readingreference : <a href="https://www.google.com/search?q=red teaming+AI+security+research+papers" target="_blank">red teaming Research Papers and Articles</a>
+- readingreferences : <a href="https://www.google.com/search?q=red teaming+AI+security+research+papers" target="_blank">red teaming Research Papers and Articles</a>

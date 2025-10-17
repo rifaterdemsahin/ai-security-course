@@ -3,4 +3,4 @@
 - answer : Fast Gradient Sign Method - A simple adversarial attack algorithm that generates adversarial examples by taking a single step in the direction of the gradient to maximize loss
 - youtubereference : <a href="https://www.youtube.com/watch?v=p_i32sJc2-A" target="_blank">This Tiny Change BREAKS AI | FGSM Adversarial Attack Explained</a>
 - googleimages : <a href="https://www.google.com/search?q=FGSM+fast+gradient+sign+method+adversarial+examples&tbm=isch" target="_blank">FGSM Algorithm Visualizations and Examples</a>
-- readingreference : <a href="https://www.google.com/search?q=FGSM+fast+gradient+sign+method+research+papers" target="_blank">FGSM Research Papers and Articles</a>
+- readingreferences : <a href="https://www.google.com/search?q=FGSM+fast+gradient+sign+method+research+papers" target="_blank">FGSM Research Papers and Articles</a>

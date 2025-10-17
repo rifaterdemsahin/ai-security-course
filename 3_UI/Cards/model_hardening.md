@@ -3,4 +3,4 @@
 - answer : The process of implementing multiple defensive layers and security measures to strengthen an AI model against various attack vectors and improve its overall security posture
 - youtubereference : <a href="https://www.youtube.com/watch?v=A3uV5J9D4wk" target="_blank">AI Model Hardening: Security Best Practices</a>
 - googleimages : <a href="https://www.google.com/search?q=🧱+model+hardening+AI+security+machine+learning&tbm=isch" target="_blank">🧱 Model Hardening Examples and Visualizations</a>
-- readingreference : <a href="https://www.google.com/search?q=model hardening+AI+security+research+papers" target="_blank">model hardening Research Papers and Articles</a>
+- readingreferences : <a href="https://www.google.com/search?q=model hardening+AI+security+research+papers" target="_blank">model hardening Research Papers and Articles</a>

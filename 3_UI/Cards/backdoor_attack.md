@@ -3,4 +3,4 @@
 - answer : A type of data poisoning attack where malicious triggers are embedded in the training data, causing the model to behave normally except when the specific trigger is present
 - youtubereference : <a href="https://www.youtube.com/watch?v=QO4mfpoU-8A" target="_blank">Backdoor Attacks on Deep Neural Networks</a>
 - googleimages : <a href="https://www.google.com/search?q=backdoor+attack+neural+networks+AI+security&tbm=isch" target="_blank">Backdoor Attack Diagrams and Research Examples</a>
-- readingreference : <a href="https://www.google.com/search?q=backdoor attack+AI+security+research+papers" target="_blank">backdoor attack Research Papers and Articles</a>
+- readingreferences : <a href="https://www.google.com/search?q=backdoor attack+AI+security+research+papers" target="_blank">backdoor attack Research Papers and Articles</a>
