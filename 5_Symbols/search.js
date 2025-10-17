@@ -88,6 +88,10 @@ function initializeSearch() {
                             <i class="bi bi-exclamation-triangle me-2"></i>
                             Error loading search results: ${error.message}
                             <br><small>Attempted to fetch from: ${searchJsonPath}</small>
+                            <br><small>Current location: ${window.location.href}</small>
+                            <div class="mt-2">
+                                <button class="btn btn-sm btn-outline-primary" onclick="testSearchJson()">Test Direct Access</button>
+                            </div>
                         </div>`;
                 }
             });
@@ -344,6 +348,39 @@ function clearSearch() {
     if (searchInput) {
         searchInput.value = '';
     }
+}
+
+function testSearchJson() {
+    // Test function to help debug search.json access
+    const currentPath = window.location.pathname;
+    const possiblePaths = [
+        'search.json',
+        './search.json',
+        '/ai-security-course/5_Symbols/search.json',
+        '5_Symbols/search.json',
+        '../../search.json',
+        '../search.json'
+    ];
+    
+    console.log('Current path:', currentPath);
+    console.log('Testing search.json access...');
+    
+    possiblePaths.forEach(path => {
+        fetch(path)
+            .then(response => {
+                console.log(`✅ ${path}: Status ${response.status}`);
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error(`Status ${response.status}`);
+            })
+            .then(data => {
+                console.log(`✅ ${path}: Valid JSON with ${Object.keys(data).length} properties`);
+            })
+            .catch(error => {
+                console.log(`❌ ${path}: ${error.message}`);
+            });
+    });
 }
 
 function highlightQuery(text, query) {
