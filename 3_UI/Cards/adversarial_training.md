@@ -5,3 +5,4 @@
 - googleimages : <a href="https://www.google.com/search?q=adversarial+training+machine+learning+defense&tbm=isch" target="_blank">Adversarial Training Process and Defense Mechanisms</a>
 - readingreferences : <a href="https://www.google.com/search?q=adversarial training+AI+security+research+papers" target="_blank">adversarial training Research Papers and Articles</a>
 - readingreferences : <a href="https://neptune.ai/blog/adversarial-training-in-deep-learning-guide" target="_blank">Adversarial Training in Deep Learning: A Guide</a>
+- readingreferences : <a href="https://arxiv.org/abs/1706.06083" target="_blank">Towards Deep Learning Models Resistant to Adversarial Attacks</a>

@@ -4,3 +4,4 @@
 - youtubereference : <a href="https://www.youtube.com/watch?v=QO4mfpoU-8A" target="_blank">Backdoor Attacks on Deep Neural Networks</a>
 - googleimages : <a href="https://www.google.com/search?q=backdoor+attack+neural+networks+AI+security&tbm=isch" target="_blank">Backdoor Attack Diagrams and Research Examples</a>
 - readingreferences : <a href="https://www.google.com/search?q=backdoor attack+AI+security+research+papers" target="_blank">backdoor attack Research Papers and Articles</a>
+- readingreferences : <a href="https://www.cobalt.io/blog/backdoor-attacks-on-ai-models" target="_blank">Cobalt: Backdoor Attacks on AI Models (diagrams & real-world examples)</a>

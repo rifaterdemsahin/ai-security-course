@@ -5,3 +5,4 @@
 - googleimages : <a href="https://www.google.com/search?q=adversarial+patch+physical+attack+computer+vision&tbm=isch" target="_blank">Adversarial Patch Physical Attack Examples</a>
 - readingreferences : <a href="https://www.google.com/search?q=adversarial+patch+AI+security+research+papers" target="_blank">Adversarial Patch Research Papers and Articles</a>
 - readingreferences : <a href="https://www.emergentmind.com/papers/2203.06902" target="_blank">Adversarial Patch Attacks and Defences in Vision-Based Systems: A Survey</a>
+- readingreferences : <a href="https://example.com" target="_blank">[New Reading Reference Placeholder]</a>

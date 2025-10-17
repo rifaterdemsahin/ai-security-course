@@ -7,7 +7,8 @@
 - answer : [Clear, concise definition or explanation of the concept]
 - youtubereference : <a href="[URL]" target="_blank">[Link Title/Description]</a>
 - googleimages : <a href="[URL]" target="_blank">[Link Title/Description]</a>
-- readingreferencess target="_blank">[Link Title/Description]</a>
+- readingreferences : [Link Title/Description]
+- readingreferences : <a href="https://example.com" target="_blank">[New Reading Reference Placeholder]</a>
 
 <!-- Example Usage:
 - question : 🎯 adversarial attack

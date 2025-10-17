@@ -4,3 +4,4 @@
 - youtubereference : <a href="https://www.youtube.com/watch?v=XfuoKTQgOFY" target="_blank">AI Security Lifecycle Management</a>
 - googleimages : <a href="https://www.google.com/search?q=AI+security+lifecycle+development+deployment&tbm=isch" target="_blank">AI Security Lifecycle Process Diagrams</a>
 - readingreferences : <a href="https://www.google.com/search?q=ai security lifecycle+AI+security+research+papers" target="_blank">ai security lifecycle Research Papers and Articles</a>
+- readingreferences : <a href="https://www.paloaltonetworks.com/cyberpedia/ai-development-lifecycle" target="_blank">Palo Alto Networks: AI Development Lifecycle (includes diagrams and visuals)</a>

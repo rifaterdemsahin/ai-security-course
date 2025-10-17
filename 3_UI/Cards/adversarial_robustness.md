@@ -5,3 +5,4 @@
 - googleimages : <a href="https://www.google.com/search?q=adversarial+robustness+AI+model+defense&tbm=isch" target="_blank">Adversarial Robustness Techniques and Metrics</a>
 - readingreferences : <a href="https://www.google.com/search?q=adversarial robustness+AI+security+research+papers" target="_blank">adversarial robustness Research Papers and Articles</a>
 - readingreferences : <a href="https://www.robust-ml.com/" target="_blank">Adversarial Robustness: Theory and Practice</a>
+- readingreferences : <a href="https://arxiv.org/abs/1902.06305" target="_blank">Evaluating the Robustness of Neural Networks: An Extreme Value Theory Approach</a>

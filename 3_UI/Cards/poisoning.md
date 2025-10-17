@@ -4,3 +4,4 @@
 - youtubereference : <a href="https://www.youtube.com/results?search_query=data+poisoning+attack+AI+security" target="_blank">Data Poisoning Attack AI Security Videos</a>
 - googleimages : <a href="https://www.google.com/search?q=data+poisoning+attack+AI+security+examples&tbm=isch" target="_blank">Data Poisoning Attack Examples and Visualizations</a>
 - readingreferences : <a href="https://www.google.com/search?q=data+poisoning+attack+AI+security+research+papers" target="_blank">Data Poisoning Attack Research Papers and Articles</a>
+- readingreferences : <a href="https://arxiv.org/abs/2206.09478" target="_blank">Poisoning Web-Scale Training Datasets is Practical</a>

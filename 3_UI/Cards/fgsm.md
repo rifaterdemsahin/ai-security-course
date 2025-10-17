@@ -4,3 +4,4 @@
 - youtubereference : <a href="https://www.youtube.com/watch?v=p_i32sJc2-A" target="_blank">This Tiny Change BREAKS AI | FGSM Adversarial Attack Explained</a>
 - googleimages : <a href="https://www.google.com/search?q=FGSM+fast+gradient+sign+method+adversarial+examples&tbm=isch" target="_blank">FGSM Algorithm Visualizations and Examples</a>
 - readingreferences : <a href="https://www.google.com/search?q=FGSM+fast+gradient+sign+method+research+papers" target="_blank">FGSM Research Papers and Articles</a>
+- readingreferences : <a href="https://example.com" target="_blank">[New Reading Reference Placeholder]</a>
