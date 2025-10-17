@@ -25,24 +25,19 @@ function initializeSearch() {
     }
 }
 
-function performSearch(query) {
-    console.log('Performing search for:', query);
+    function performSearch(query) {
+        // NOTE: This is a mock search implementation.
+        // It fetches mock results from a JSON file.
+        console.log('Performing search for:', query);
 
-    // Show search results container and hide main content
-    const searchResultsContainer = document.getElementById('search-results');
-    const mainContent = document.querySelector('.container.my-4');
-    
-    if (searchResultsContainer) {
-        searchResultsContainer.classList.add('show');
+        fetch('search.json')
+            .then(response => response.json())
+            .then(data => displayResults(data))
+            .catch(error => {
+                console.error('Error fetching search results:', error);
+                searchResultsContainer.innerHTML = '<p>Error loading search results.</p>';
+            });
     }
-    if (mainContent) {
-        mainContent.style.display = 'none';
-    }
-
-    // Mock search results based on the query
-    const mockResults = generateMockResults(query);
-    displayResults(mockResults, query);
-}
 
 function generateMockResults(query) {
     const allResults = [
