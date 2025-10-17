@@ -194,3 +194,112 @@
         font-size: 0.9rem;
     }
 }
+
+/* Admin Toggle Styles */
+.admin-toggle-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.admin-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    gap: 0.5rem;
+}
+
+.admin-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.admin-slider {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background-color: #28a745;
+    border-radius: 24px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px;
+    overflow: hidden;
+}
+
+.admin-slider:before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    left: 3px;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.admin-slider i {
+    font-size: 10px;
+    color: white;
+    z-index: 1;
+}
+
+.admin-slider .bi-person-fill {
+    margin-left: 2px;
+}
+
+.admin-slider .bi-gear-fill {
+    margin-right: 2px;
+}
+
+.admin-toggle input:checked + .admin-slider {
+    background-color: #dc3545;
+}
+
+.admin-toggle input:checked + .admin-slider:before {
+    transform: translateX(26px);
+}
+
+.admin-toggle.admin-active .admin-slider {
+    background-color: #dc3545;
+}
+
+.admin-label {
+    color: #28a745;
+    font-weight: 600;
+    font-size: 0.9rem;
+    min-width: 50px;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .admin-toggle-container {
+        order: -1;
+        margin-left: 0;
+        margin-right: auto;
+    }
+    
+    .admin-label {
+        display: none;
+    }
+    
+    .admin-slider {
+        width: 40px;
+        height: 20px;
+    }
+    
+    .admin-slider:before {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .admin-toggle input:checked + .admin-slider:before {
+        transform: translateX(20px);
+    }
+}

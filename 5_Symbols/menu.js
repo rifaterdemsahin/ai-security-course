@@ -32,6 +32,18 @@ function loadMenu() {
             <div class="nav-container">
                 <a href="${basePath}index.html" class="nav-brand">🛡️ AI Security Course</a>
                 
+                <!-- Admin Mode Toggle -->
+                <div class="admin-toggle-container">
+                    <label class="admin-toggle">
+                        <input type="checkbox" id="admin-mode-toggle" onchange="toggleAdminMode()">
+                        <span class="admin-slider">
+                            <i class="bi bi-person-fill"></i>
+                            <i class="bi bi-gear-fill"></i>
+                        </span>
+                        <span class="admin-label">Admin</span>
+                    </label>
+                </div>
+                
                 <button class="mobile-menu-toggle d-md-none" onclick="toggleMobileMenu()">
                     <i class="bi bi-list"></i>
                 </button>
@@ -135,3 +147,67 @@ window.addEventListener('resize', function() {
 });
 
 document.addEventListener('DOMContentLoaded', loadMenu);
+
+// Admin mode functionality
+function toggleAdminMode() {
+    const isAdminMode = document.getElementById('admin-mode-toggle').checked;
+    localStorage.setItem('adminMode', isAdminMode);
+    
+    // Toggle admin-only content
+    const adminRows = document.querySelectorAll('.admin-only');
+    adminRows.forEach(row => {
+        if (isAdminMode) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+    
+    // Toggle student mode banner
+    const studentBanner = document.getElementById('student-mode-banner');
+    if (studentBanner) {
+        if (isAdminMode) {
+            studentBanner.classList.add('hidden');
+        } else {
+            studentBanner.classList.remove('hidden');
+        }
+    }
+    
+    // Update toggle appearance
+    updateAdminToggleAppearance(isAdminMode);
+}
+
+function updateAdminToggleAppearance(isAdminMode) {
+    const toggle = document.querySelector('.admin-toggle');
+    const label = document.querySelector('.admin-label');
+    
+    if (toggle) {
+        if (isAdminMode) {
+            toggle.classList.add('admin-active');
+            label.textContent = 'Admin';
+            label.style.color = '#dc3545';
+        } else {
+            toggle.classList.remove('admin-active');
+            label.textContent = 'Student';
+            label.style.color = '#28a745';
+        }
+    }
+}
+
+// Initialize admin mode on page load
+function initializeAdminMode() {
+    const savedAdminMode = localStorage.getItem('adminMode') === 'true';
+    const adminToggle = document.getElementById('admin-mode-toggle');
+    
+    if (adminToggle) {
+        adminToggle.checked = savedAdminMode;
+        toggleAdminMode();
+    }
+}
+
+// Initialize admin mode after menu loads
+document.addEventListener('DOMContentLoaded', function() {
+    loadMenu();
+    // Small delay to ensure menu is loaded
+    setTimeout(initializeAdminMode, 100);
+});
