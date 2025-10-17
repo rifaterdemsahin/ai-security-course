@@ -4,3 +4,4 @@
 - youtubereference : <a href="https://www.youtube.com/watch?v=p_i32sJc2-A" target="_blank">This Tiny Change BREAKS AI | FGSM Adversarial Attack Explained</a>
 - googleimages : <a href="https://www.google.com/search?q=adversarial+attack+AI+security+examples&tbm=isch" target="_blank">Adversarial Attack Examples and Visualizations</a>
 - readingreferences : <a href="https://www.google.com/search?q=adversarial+attack+AI+security+research+papers" target="_blank">Adversarial Attack Research Papers and Articles</a>
+- readingreferences : <a href="https://www.labellerr.com/blog/what-are-adversarial-attacks-in-machine-learning-and-how-can-you-prevent-them/" target="_blank">What Are Adversarial Attacks in Machine Learning and How Can You Prevent Them?</a>
