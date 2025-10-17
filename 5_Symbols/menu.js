@@ -87,6 +87,14 @@ function loadMenu() {
                             <span class="lesson-badge d-none d-xl-inline" style="background: #6f42c1;">Practice</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="${basePath}renderer.html?file=../license.md" class="nav-link get-started-link">
+                            <i class="bi bi-download me-2"></i>
+                            <span class="d-none d-lg-inline">Get Started</span>
+                            <span class="d-lg-none">Setup</span>
+                            <span class="lesson-badge d-none d-xl-inline" style="background: #fd7e14;">Fork & Learn</span>
+                        </a>
+                    </li>
                     <li class="nav-item nav-search">
                         <form id="search-form" class="d-flex">
                             <input id="search-input" class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
