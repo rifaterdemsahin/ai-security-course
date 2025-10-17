@@ -88,11 +88,11 @@ function loadMenu() {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="${basePath}renderer.html?file=../license.md" class="nav-link get-started-link">
-                            <i class="bi bi-download me-2"></i>
-                            <span class="d-none d-lg-inline">Get Started</span>
-                            <span class="d-lg-none">Setup</span>
-                            <span class="lesson-badge d-none d-xl-inline" style="background: #fd7e14;">Fork & Learn</span>
+                        <a href="${basePath}renderer.html?file=../student-welcome.md" class="nav-link get-started-link">
+                            <i class="bi bi-book me-2"></i>
+                            <span class="d-none d-lg-inline">Course Guide</span>
+                            <span class="d-lg-none">Guide</span>
+                            <span class="lesson-badge d-none d-xl-inline" style="background: #28a745;">Start Here</span>
                         </a>
                     </li>
                     <li class="nav-item nav-search">
@@ -178,6 +178,16 @@ function toggleAdminMode() {
             studentBanner.classList.add('hidden');
         } else {
             studentBanner.classList.remove('hidden');
+        }
+    }
+    
+    // Toggle setup banner
+    const setupBanner = document.querySelector('.setup-banner');
+    if (setupBanner) {
+        if (isAdminMode) {
+            setupBanner.style.display = 'none';
+        } else {
+            setupBanner.style.display = '';
         }
     }
     

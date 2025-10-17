@@ -285,6 +285,41 @@ li {
     margin-right: 8px;
 }
 
+/* Special Row Styling */
+.license-row {
+    background: linear-gradient(135deg, rgba(253, 126, 20, 0.1) 0%, rgba(255, 193, 7, 0.1) 100%);
+    border-left: 4px solid #fd7e14;
+}
+
+.license-row:hover {
+    background: linear-gradient(135deg, rgba(253, 126, 20, 0.15) 0%, rgba(255, 193, 7, 0.15) 100%);
+    transform: translateX(2px);
+}
+
+.welcome-row {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(32, 201, 151, 0.1) 100%);
+    border-left: 4px solid #28a745;
+    border-top: 2px solid #28a745;
+}
+
+.welcome-row:hover {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.15) 0%, rgba(32, 201, 151, 0.15) 100%);
+    transform: translateX(2px);
+}
+
+.welcome-row .category-cell {
+    font-weight: 700;
+}
+
+.welcome-row a {
+    font-weight: 600;
+    color: #28a745;
+}
+
+.welcome-row a:hover {
+    color: #1e7e34;
+}
+
 /* Setup Banner Styles */
 .setup-banner {
     background: linear-gradient(135deg, #fd7e14 0%, #ffc107 100%);

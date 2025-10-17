@@ -247,7 +247,11 @@
     "Attack Detection",
     "Input Validation",
     "Security Lifecycle",
-    "Threat Modeling"
+    "Threat Modeling",
+    "Self-Learning Setup",
+    "Course Introduction",
+    "MIT License",
+    "Repository Forking"
   ],
   "search_index": [
     {
@@ -255,6 +259,18 @@
       "line_number": 5,
       "content": "**Duration:** Approximately 21 minutes",
       "keywords": ["duration", "module 1"]
+    },
+    {
+      "file_path": "student-welcome.md",
+      "line_number": 1,
+      "content": "Welcome to AI Security Course - Course introduction, learning path, and setup instructions",
+      "keywords": ["welcome", "getting started", "introduction", "learning path", "fork", "setup", "student guide"]
+    },
+    {
+      "file_path": "license.md",
+      "line_number": 1,
+      "content": "License & Self-Learning Environment Setup - MIT License and guide to create your own learning environment",
+      "keywords": ["license", "MIT", "fork", "clone", "setup", "self-learning", "github", "repository"]
     }
   ]
 }
